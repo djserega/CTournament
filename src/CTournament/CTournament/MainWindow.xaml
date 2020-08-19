@@ -1,0 +1,103 @@
+﻿<Window x:Class="CTournament.MainWindow"
+        DataContext="{Binding Source={StaticResource VMLoader}, Path=MainWindow}"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CTournament" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d"
+        Title="CTournament by GOD" Height="700" Width="1600">
+    <Grid Margin="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0"
+                    BorderThickness="1"
+                    Margin="1"
+                    BorderBrush="Orange">
+                <Frame Content="{Binding TournamentDirectory}"/>
+            </Border>
+
+            <Grid Grid.Row="1"
+                  Margin="0 5">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" 
+                       Source="/Resources/arrow-up.png"
+                       ToolTip="Отобразить параметры расчета и тестовые данные."
+                       Height="15"
+                       Width="200"
+                       Visibility="{Binding VisibilityPanel.VisibilityBorderLegentUp, Mode=OneWay}">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseLeftButtonDown">
+                            <i:InvokeCommandAction Command="{Binding VisibilityPanel.CommandChangeVisibility}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+
+                </Image>
+
+                <!--<Border Grid.Row="1"
+                        BorderThickness="1"
+                        BorderBrush="Orange"/>-->
+
+                <Image Grid.Row="2"
+                       Source="/Resources/arrow-down.png"
+                       ToolTip="Скрыть параметры расчета и тестовые данные."
+                       Height="15"
+                       Width="200"
+                       Visibility="{Binding VisibilityPanel.VisibilityBorderLegentDown, Mode=OneWay}">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseLeftButtonDown">
+                            <i:InvokeCommandAction Command="{Binding VisibilityPanel.CommandChangeVisibility}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+
+                </Image>
+            </Grid>
+
+            <Border Grid.Row="2"
+                    BorderThickness="1"
+                    Margin="1"
+                    BorderBrush="Orange"
+                    Visibility="{Binding VisibilityPanel.VisibilityBorderLegentDown, Mode=OneWay}">
+                <Frame Content="{Binding RateSettings}"/>
+            </Border>
+
+        </Grid>
+
+        <Grid Grid.Column="1">
+           
+            <Border BorderThickness="1"
+                    Width="2"
+                    Margin="0 5"
+                    BorderBrush="Orange"/>
+
+        </Grid>
+
+        <Grid Grid.Column="2">
+          
+            <Border Grid.Row="1"
+                    BorderThickness="1"
+                    Margin="1"
+                    BorderBrush="Orange">
+                <Frame Content="{Binding TournamentReplays}"/>
+            </Border>
+
+        </Grid>
+        
+    </Grid>
+</Window>

@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Version>1.0.7</Version>
+    <PackageIcon>ctournament.png</PackageIcon>
+    <ApplicationIcon></ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\arrow-down.png" />
+    <None Remove="Resources\arrow-up.png" />
+    <None Remove="Resources\NameMaps.json" />
+    <None Remove="Resources\NameMissions.json" />
+    <None Remove="Resources\NameOperators.json" />
+    <None Remove="Resources\TypesMission.json" />
+    <None Include="C:\Users\DJSerega\Pictures\ctournament.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpressMvvm" Version="20.1.6" />
+    <PackageReference Include="MaterialDesignColors" Version="1.2.6" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.6" />
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Ookii.Dialogs.Wpf" Version="1.1.0" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.2.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\CReplay\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\NameMaps.json" />
+    <EmbeddedResource Include="Resources\NameMissions.json" />
+    <EmbeddedResource Include="Resources\NameOperators.json" />
+    <EmbeddedResource Include="Resources\TypesMission.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\arrow-down.png" />
+    <Resource Include="Resources\arrow-up.png" />
+  </ItemGroup>
+
+</Project>

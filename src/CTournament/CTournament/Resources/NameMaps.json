@@ -1,0 +1,28 @@
+{
+  "lv_karhad_desertpolygon_default": "Полигон: Постоянная миссия",
+
+  "lv_karhad_mall_default": "Торговый центр",
+  "lv_karhad_mall_storm": "Торговый центр: Шторм.",
+
+  "lv_karhad_palmroad_default": "Пальмовая дорога",
+  "lv_karhad_palmroad_dark": "Пальмовая дорога: Грозовая",
+  "lv_karhad_palmroad_evening": "Пальмовая дорога: Утро",
+
+  "lv_karhad_hospital_pve": "Больница",
+  "lv_karhad_hospital_default": "Больница",
+  "lv_karhad_hospital_dusk": "Больница: Сумерки",
+
+  "lv_karhad_caravanserai_default": "Караван Сарай",
+  "lv_karhad_caravanserai_night": "Караван Сарай: Ночь.",
+
+  "lv_karhad_hangar_default": "Гавань 'Амаль'",
+  "lv_karhad_hangar_storm": "Гавань 'Амаль': Шторм.",
+
+  "lv_karhad_village_default": "Деревня",
+  "lv_karhad_village_day": "Деревня: День",
+
+  "lv_karhad_emirresidence_default": "Резиденция эмира",
+  "lv_karhad_emirresidence_evening": "Резиденция эмира: Вечер",
+
+  "lv_karhad_hotel_default": "Отель Альмалик"
+}

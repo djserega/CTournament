@@ -1,0 +1,42 @@
+{
+  "lv_karhad_desertpolygon": "Полигон: Постоянная миссия",
+  "lv_karhad_mall": "Торговый центр",
+  "lv_karhad_palmroad": "Пальмовая дорога",
+  "lv_karhad_hospital": "Больница",
+  "lv_karhad_caravanserai": "Караван Сарай",
+  "lv_karhad_hangar": "Гавань 'Амаль'",
+  "lv_karhad_village": "Деревня",
+  "lv_karhad_emirresidence": "Резиденция эмира",
+  "lv_karhad_hotel": "Отель Альмалик",
+
+  "lv_karhad_desertpolygon_pve": "Полигон: Постоянная миссия",
+  "lv_karhad_mall_pve": "Торговый центр",
+  "lv_karhad_palmroad_pve": "Пальмовая дорога",
+  "lv_karhad_hospital_pve": "Больница",
+  "lv_karhad_caravanserai_pve": "Караван Сарай",
+  "lv_karhad_hangar_pve": "Гавань 'Амаль'",
+  "lv_karhad_village_pve": "Деревня",
+  "lv_karhad_emirresidence_pve": "Резиденция эмира",
+  "lv_karhad_hotel_pve": "Отель Альмалик",
+
+  "lv_karhad_desertpolygon_pvp": "Полигон: Постоянная миссия",
+  "lv_karhad_mall_pvp": "Торговый центр",
+  "lv_karhad_palmroad_pvp": "Пальмовая дорога",
+  "lv_karhad_hospital_pvp": "Больница",
+  "lv_karhad_caravanserai_pvp": "Караван Сарай",
+  "lv_karhad_hangar_pvp": "Гавань 'Амаль'",
+  "lv_karhad_village_pvp": "Деревня",
+  "lv_karhad_emirresidence_pvp": "Резиденция эмира",
+  "lv_karhad_hotel_pvp": "Отель Альмалик",
+
+  "lv_karhad_desertpolygon_hacking": "Полигон: Постоянная миссия",
+  "lv_karhad_mall_hacking": "Торговый центр",
+  "lv_karhad_palmroad_hacking": "Пальмовая дорога",
+  "lv_karhad_hospital_hacking": "Больница",
+  "lv_karhad_caravanserai_hacking": "Караван Сарай",
+  "lv_karhad_hangar_hacking": "Гавань 'Амаль'",
+  "lv_karhad_village_hacking": "Деревня",
+  "lv_karhad_emirresidence_hacking": "Резиденция эмира",
+
+  "lv_karhad_palmroad_pvpve": "Пальмовая дорога"
+}

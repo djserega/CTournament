@@ -57,6 +57,20 @@ namespace CTournament.ViewModels
 
         public DataGridRowDetailsVisibilityMode VisibilityDetailedInfoReplay { get => VisibleDetailedInfoReplay ? DataGridRowDetailsVisibilityMode.VisibleWhenSelected : DataGridRowDetailsVisibilityMode.Collapsed; }
 
+        public ICommand SaveReplaysToExcelCommand => new DelegateCommand(() =>
+        {
+            if (Replays == null)
+                return;
+
+            List<Models.TournamentReplay> tournamentReplays = Replays.Cast<Models.TournamentReplay>().ToList();
+
+            SaveToExcel.Saving saveToExcel = new SaveToExcel.Saving() 
+            {
+                FileName = _currentTournametDirectory.Name
+            };
+            saveToExcel.SaveList(tournamentReplays);
+        });
+
         public ICommand RefreshListReplaysCommand => new DelegateCommand(async () => { await UpdateListReplaysAsync(); });
 
         private async Task UpdateListReplaysAsync()

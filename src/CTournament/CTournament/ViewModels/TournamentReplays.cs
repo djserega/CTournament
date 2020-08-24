@@ -19,6 +19,8 @@ namespace CTournament.ViewModels
     {
         private readonly object _lock = new object();
 
+        public static event EventHandler<List<Models.TournamentReplay>> UpdateListReplaysEvents;
+
         private Models.TournamentsDirectory _currentTournametDirectory;
 
         public TournamentReplays()
@@ -92,6 +94,8 @@ namespace CTournament.ViewModels
             }
 
             Replays = CollectionViewSource.GetDefaultView(replays);
+
+            UpdateListReplaysEvents?.Invoke(null, replays);
 
             ReplaysUpdating = false;
         }

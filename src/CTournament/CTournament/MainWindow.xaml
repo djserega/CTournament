@@ -4,7 +4,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CTournament" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:local="clr-namespace:CTournament" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="CTournament by GOD" Height="700" Width="1600">
     <Grid Margin="2">
@@ -80,7 +80,7 @@
         </Grid>
 
         <Grid Grid.Column="1">
-           
+
             <Border BorderThickness="1"
                     Width="2"
                     Margin="0 5"
@@ -89,15 +89,38 @@
         </Grid>
 
         <Grid Grid.Column="2">
-          
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0"
+                    BorderThickness="1"
+                    Margin="1"
+                    BorderBrush="Orange">
+
+                    <!--<Expander HorizontalAlignment="Stretch"
+                              Header="Реплеи"
+                              IsExpanded="True">-->
+                        <Frame Content="{Binding TournamentReplays}"/>
+                    <!--</Expander>-->
+
+            </Border>
+
             <Border Grid.Row="1"
                     BorderThickness="1"
                     Margin="1"
                     BorderBrush="Orange">
-                <Frame Content="{Binding TournamentReplays}"/>
+
+                <Expander Grid.Row="2"
+                          HorizontalAlignment="Stretch"
+                          Header="Личный зачет">
+                    <Frame Content="{Binding UserStatistics}"/>
+                </Expander>
+
             </Border>
 
         </Grid>
-        
+
     </Grid>
 </Window>

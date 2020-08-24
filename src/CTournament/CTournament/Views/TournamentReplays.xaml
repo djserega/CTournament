@@ -46,9 +46,11 @@
                 <DataGridCheckBoxColumn Header="Есть рекруты"   Binding="{Binding IsRecruit}"/>
                 <DataGridTextColumn     Header="Мин уровень"    Binding="{Binding MinLevelOperators}" CellStyle="{StaticResource MinLevelOperatorsStyle}"/>
                 <DataGridTextColumn     Header="Миссия"         Binding="{Binding Mission}"/>
+                <DataGridTextColumn     Header="Ликвидировал"   Binding="{Binding Data.AllKills}"/>
+                <DataGridTextColumn     Header="Погиб"          Binding="{Binding Data.Death}"/>
+                <DataGridTextColumn     Header="Содействия"     Binding="{Binding Data.Assists}"/>
                 <DataGridTextColumn     Header="Урон"           Binding="{Binding Data.Damage}"/>
                 <DataGridTextColumn     Header="Лечение"        Binding="{Binding Data.Heal}"/>
-                <DataGridTextColumn     Header="Погиб"          Binding="{Binding Data.Death}"/>
                 <DataGridTextColumn     Header="Время боя"      Binding="{Binding MatchTimeAsTime}"/>
                 <DataGridTextColumn     Header="Результат"      Binding="{Binding Result}"/>
             </DataGrid.Columns>
@@ -72,13 +74,15 @@
                                       AutoGenerateColumns="False"
                                       Margin="100 5">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Id"             Binding="{Binding UserId, StringFormat=\{0:### ### ###\}}" CellStyle="{StaticResource CellStyleHorizontalRight}"/>
+                                    <DataGridTextColumn Header="Id"             Binding="{Binding UserId, StringFormat=\{0:### ### ###\}}"  CellStyle="{StaticResource CellStyleHorizontalRight}"/>
                                     <DataGridTextColumn Header="Никнейм"        Binding="{Binding PlayersDataInfo.Nickname}"/>
                                     <DataGridTextColumn Header="Оперативник"    Binding="{Binding VisualNameRu}"/>
-                                    <DataGridTextColumn Header="Уровень"        Binding="{Binding Level}" CellStyle="{StaticResource CellStyleHorizontalCenter}"/>
-                                    <DataGridTextColumn Header="Урон"           Binding="{Binding PlayersDataInfo.DamageDealt}" CellStyle="{StaticResource CellStyleHorizontalRight}"/>
-                                    <DataGridTextColumn Header="Лечение"        Binding="{Binding PlayersDataInfo.HitPointHealed}" CellStyle="{StaticResource CellStyleHorizontalRight}"/>
-                                    <DataGridTextColumn Header="Смертей"        Binding="{Binding PlayersDataInfo.Deaths}" CellStyle="{StaticResource CellStyleHorizontalRight}"/>
+                                    <DataGridTextColumn Header="Уровень"        Binding="{Binding Level}"                                   CellStyle="{StaticResource CellStyleHorizontalCenter}"/>
+                                    <DataGridTextColumn Header="Ликвидировал"   Binding="{Binding PlayersDataInfo.AllKills}"                CellStyle="{StaticResource CellStyleHorizontalRight}"/>
+                                    <DataGridTextColumn Header="Погиб"          Binding="{Binding PlayersDataInfo.Deaths}"                  CellStyle="{StaticResource CellStyleHorizontalRight}"/>
+                                    <DataGridTextColumn Header="Содействия"     Binding="{Binding PlayersDataInfo.Assists}"                 CellStyle="{StaticResource CellStyleHorizontalRight}"/>
+                                    <DataGridTextColumn Header="Урон"           Binding="{Binding PlayersDataInfo.DamageDealt}"             CellStyle="{StaticResource CellStyleHorizontalRight}"/>
+                                    <DataGridTextColumn Header="Лечение"        Binding="{Binding PlayersDataInfo.HitPointHealed}"          CellStyle="{StaticResource CellStyleHorizontalRight}"/>
                                 </DataGrid.Columns>
                             </DataGrid>
                             <StackPanel Grid.Row="1"

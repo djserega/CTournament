@@ -37,6 +37,17 @@
   "lv_karhad_hangar_hacking": "Гавань 'Амаль'",
   "lv_karhad_village_hacking": "Деревня",
   "lv_karhad_emirresidence_hacking": "Резиденция эмира",
+  "lv_karhad_hotel_hacking": "Отель Альмалик",
+
+  "lv_karhad_desertpolygon_pvpranked": "Полигон: Постоянная миссия",
+  "lv_karhad_mall_pvpranked": "Торговый центр",
+  "lv_karhad_palmroad_pvpranked": "Пальмовая дорога",
+  "lv_karhad_hospital_pvpranked": "Больница",
+  "lv_karhad_caravanserai_pvpranked": "Караван Сарай",
+  "lv_karhad_hangar_pvpranked": "Гавань 'Амаль'",
+  "lv_karhad_village_pvpranked": "Деревня",
+  "lv_karhad_emirresidence_pvpranked": "Резиденция эмира",
+  "lv_karhad_hotel_pvpranked": "Отель Альмалик",
 
   "lv_karhad_palmroad_pvpve": "Пальмовая дорога"
 }

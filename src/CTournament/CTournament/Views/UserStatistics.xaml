@@ -10,138 +10,140 @@
       Title="UserStatistics">
 
     <Grid>
-        
-        <Grid HorizontalAlignment="Center">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-            </Grid.ColumnDefinitions>
 
-            <Grid Grid.Row="1"
-                  Grid.Column="0">
+        <ScrollViewer HorizontalScrollBarVisibility="Visible">
+            <Grid HorizontalAlignment="Center">
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0"
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Row="1"
+                  Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"
                            Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
                            Text="Топ по игрокам"/>
-                <TextBlock Grid.Row="1"
+                    <TextBlock Grid.Row="1"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"
                            Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
                            Text="Топ по оперативникам"/>
-                <TextBlock Grid.Row="2"
+                    <TextBlock Grid.Row="2"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"
                            Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
                            Text="Сумма по игрокам"/>
-                <TextBlock Grid.Row="3"
+                    <TextBlock Grid.Row="3"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"
                            Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
                            Text="Сумма по оперативникам"/>
-            </Grid>
+                </Grid>
 
-            <!--#region UserStatistics1 -->
-            <Label Grid.Row="0"
+                <!--#region UserStatistics1 -->
+                <Label Grid.Row="0"
                    Grid.Column="1"
                    HorizontalContentAlignment="Center"
                    Margin="2 0"
                    Background="{StaticResource MaterialDesignTextFieldBoxBackground}"
                    Content="{Binding UserStatistics1Header}"/>
 
-            <ListView Grid.Row="1"
+                <ListView Grid.Row="1"
                       Grid.Column="1"
                       HorizontalContentAlignment="Stretch"
                       ItemsSource="{Binding UserStatistics1}"/>
-            <!--#endregion-->
+                <!--#endregion-->
 
-            <!--#region UserStatistics2 -->
-            <Label Grid.Row="0"
+                <!--#region UserStatistics2 -->
+                <Label Grid.Row="0"
                    Grid.Column="2"
                    HorizontalContentAlignment="Center"
                    Margin="2 0"
                    Background="{StaticResource MaterialDesignTextFieldBoxBackground}"
                    Content="{Binding UserStatistics2Header}"/>
 
-            <ListView Grid.Row="1"
+                <ListView Grid.Row="1"
                       Grid.Column="2"
                       HorizontalContentAlignment="Stretch"
                       ItemsSource="{Binding UserStatistics2}"/>
-            <!--#endregion-->
+                <!--#endregion-->
 
-            <!--#region UserStatistics3 -->
-            <Label Grid.Row="0"
+                <!--#region UserStatistics3 -->
+                <Label Grid.Row="0"
                    Grid.Column="3"
                    HorizontalContentAlignment="Center"
                    Margin="2 0"
                    Background="{StaticResource MaterialDesignTextFieldBoxBackground}"
                    Content="{Binding UserStatistics3Header}"/>
 
-            <ListView Grid.Row="1"
+                <ListView Grid.Row="1"
                       Grid.Column="3"
                       HorizontalContentAlignment="Stretch"
                       ItemsSource="{Binding UserStatistics3}"/>
-            <!--#endregion-->
+                <!--#endregion-->
 
-            <!--#region UserStatistics4 -->
-            <Label Grid.Row="0"
+                <!--#region UserStatistics4 -->
+                <Label Grid.Row="0"
                    Grid.Column="4"
                    HorizontalContentAlignment="Center"
                    Margin="2 0"
                    Background="{StaticResource MaterialDesignTextFieldBoxBackground}"
                    Content="{Binding UserStatistics4Header}"/>
 
-            <ListView Grid.Row="1"
+                <ListView Grid.Row="1"
                       Grid.Column="4"
                       HorizontalContentAlignment="Stretch"
                       ItemsSource="{Binding UserStatistics4}"/>
-            <!--#endregion-->
+                <!--#endregion-->
 
-            <!--#region UserStatistics5 -->
-            <Label Grid.Row="0"
+                <!--#region UserStatistics5 -->
+                <Label Grid.Row="0"
                    Grid.Column="5"
                    HorizontalContentAlignment="Center"
                    Margin="2 0"
                    Background="{StaticResource MaterialDesignTextFieldBoxBackground}"
                    Content="{Binding UserStatistics5Header}"/>
 
-            <ListView Grid.Row="1"
+                <ListView Grid.Row="1"
                       Grid.Column="5"
                       HorizontalContentAlignment="Stretch"
                       ItemsSource="{Binding UserStatistics5}"/>
-            <!--#endregion-->
+                <!--#endregion-->
 
-            <!--#region UserStatistics6 -->
-            <Label Grid.Row="0"
+                <!--#region UserStatistics6 -->
+                <Label Grid.Row="0"
                    Grid.Column="6"
                    HorizontalContentAlignment="Center"
                    Margin="2 0"
                    Background="{StaticResource MaterialDesignTextFieldBoxBackground}"
                    Content="{Binding UserStatistics6Header}"/>
 
-            <ListView Grid.Row="1"
+                <ListView Grid.Row="1"
                       Grid.Column="6"
                       HorizontalContentAlignment="Stretch"
                       ItemsSource="{Binding UserStatistics6}"/>
-            <!--#endregion-->
-            
-        </Grid>
-        
+                <!--#endregion-->
+
+            </Grid>
+        </ScrollViewer>
+
         <Button Background="{StaticResource SecondaryAccentBrush}"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Right"

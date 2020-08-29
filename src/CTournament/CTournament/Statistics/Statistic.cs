@@ -102,7 +102,17 @@ namespace CTournament.Statistics
             _dictHealedOperators.Clear();
             _dictSumHealedUser.Clear();
             _dictSumHealedOperators.Clear();
+        }
 
+        internal void FillDataReplays(List<Models.TournamentReplay> replays)
+        {
+            foreach (Models.TournamentReplay replay in replays)
+            {
+                foreach (Models.CReplay.Players.PlayersInfo itemInfo in replay.PlayersData)
+                {
+                    AddData(itemInfo);
+                }
+            }
         }
 
         internal void AddData(Models.CReplay.Players.PlayersInfo playersInfo)
@@ -167,6 +177,46 @@ namespace CTournament.Statistics
 
             #endregion
 
+        }
+
+        internal List<Models.ItemUserStatisticsItemUpdater> GetAllStatistics()
+        {
+            List<Models.ItemUserStatisticsItemUpdater> userStatistics = new List<Models.ItemUserStatisticsItemUpdater>
+                {
+                    // new ItemUserStatisticsItemUpdater("", () => _statistic.()),
+
+                    new Models.ItemUserStatisticsItemUpdater("TopPlayerKillsUsers",     () => GetTopPlayerKillsUsers()),
+                    new Models.ItemUserStatisticsItemUpdater("TopPlayerKillsOperators", () => GetTopPlayerKillsOperators()),
+                    new Models.ItemUserStatisticsItemUpdater("SumPlayerKillsUsers",     () => GetSumPlayerKillsUsers()),
+                    new Models.ItemUserStatisticsItemUpdater("SumPlayerKillsOperators", () => GetSumPlayerKillsOperators()),
+
+                    new Models.ItemUserStatisticsItemUpdater("TopBotKillsUsers",        () => GetTopBotKillsUsers()),
+                    new Models.ItemUserStatisticsItemUpdater("TopBotKillsOperators",    () => GetTopBotKillsOperators()),
+                    new Models.ItemUserStatisticsItemUpdater("SumBotKillsUsers",        () => GetSumBotKillsUsers()),
+                    new Models.ItemUserStatisticsItemUpdater("SumBotKillsOperators",    () => GetSumBotKillsOperators()),
+
+                    new Models.ItemUserStatisticsItemUpdater("TopDeathUsers",           () => GetTopDeathUsers()),
+                    new Models.ItemUserStatisticsItemUpdater("TopDeathOperators",       () => GetTopDeathOperators()),
+                    new Models.ItemUserStatisticsItemUpdater("SumDeathUsers",           () => GetSumDeathUsers()),
+                    new Models.ItemUserStatisticsItemUpdater("SumDeathOperators",       () => GetSumDeathOperators()),
+
+                    new Models.ItemUserStatisticsItemUpdater("TopAssistUsers",          () => GetTopAssistUsers()),
+                    new Models.ItemUserStatisticsItemUpdater("TopAssistOperators",      () => GetTopAssistOperators()),
+                    new Models.ItemUserStatisticsItemUpdater("SumAssistUsers",          () => GetSumAssistUsers()),
+                    new Models.ItemUserStatisticsItemUpdater("SumAssistOperators",      () => GetSumAssistOperators()),
+
+                    new Models.ItemUserStatisticsItemUpdater("TopDamageDealtUsers",     () => GetTopDamageDealtUsers()),
+                    new Models.ItemUserStatisticsItemUpdater("TopDamageDealtOperators", () => GetTopDamageDealtOperators()),
+                    new Models.ItemUserStatisticsItemUpdater("SumDamageDealtUsers",     () => GetSumDamageDealtUsers()),
+                    new Models.ItemUserStatisticsItemUpdater("SumDamageDealtOperators", () => GetSumDamageDealtOperators()),
+
+                    new Models.ItemUserStatisticsItemUpdater("TopHealedUsers",          () => GetTopHealedUsers()),
+                    new Models.ItemUserStatisticsItemUpdater("TopHealedOperators",      () => GetTopHealedOperators()),
+                    new Models.ItemUserStatisticsItemUpdater("SumHealedUsers",          () => GetSumHealedUsers()),
+                    new Models.ItemUserStatisticsItemUpdater("SumHealedOperators",      () => GetSumHealedOperators()),
+                };
+
+            return userStatistics;
         }
 
         private void AddDataToDictionary(Dictionary<string, int> dict, string key, int value, bool sum = false)
@@ -269,7 +319,7 @@ namespace CTournament.Statistics
                     sortedItem.Value,
                     Convert.ToInt32(sortedItem.Key)));
 
-                if (i++ >= count)
+                if (i++ >= count - 1)
                     break;
             }
 

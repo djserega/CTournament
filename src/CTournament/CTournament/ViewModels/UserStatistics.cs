@@ -12,6 +12,8 @@ namespace CTournament.ViewModels
 {
     public class UserStatistics : BindableBase
     {
+        public static event EventHandler<List<Models.ItemUserStatisticsItemUpdater>> CalculationStatistics;
+
         private readonly object _lock = new object();
 
         private readonly Statistics.Statistic _statistic = new Statistics.Statistic();
@@ -21,7 +23,6 @@ namespace CTournament.ViewModels
         {
             TournamentReplays.UpdateListReplaysEvents += (object sender, List<Models.TournamentReplay> e) =>
             {
-                //ClearStatistics();
                 _currentListReplays = e;
                 Task.Run(async () => { await UpdateInfoAsync(true); await UpdateInfoAsync(); });
             };
@@ -73,45 +74,14 @@ namespace CTournament.ViewModels
                 UserStatistics5Header = "Урон";
                 UserStatistics6Header = "Лечение";
 
-                List<ItemUserStatisticsItemUpdater> userStatistics = new List<ItemUserStatisticsItemUpdater>
-                {
-                    // new ItemUserStatisticsItemUpdater("", () => _statistic.()),
-
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetTopPlayerKillsUsers()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetTopPlayerKillsOperators()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetSumPlayerKillsUsers()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetSumPlayerKillsOperators()),
-
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetTopBotKillsUsers()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetTopBotKillsOperators()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetSumBotKillsUsers()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetSumBotKillsOperators()),
-
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetTopDeathUsers()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetTopDeathOperators()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetSumDeathUsers()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetSumDeathOperators()),
-
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetTopAssistUsers()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetTopAssistOperators()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetSumAssistUsers()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetSumAssistOperators()),
-
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetTopDamageDealtUsers()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetTopDamageDealtOperators()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetSumDamageDealtUsers()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetSumDamageDealtOperators()),
-
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetTopHealedUsers()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetTopHealedOperators()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetSumHealedUsers()),
-                    new ItemUserStatisticsItemUpdater( () => _statistic.GetSumHealedOperators()),
-                };
+                List<Models.ItemUserStatisticsItemUpdater> userStatistics = _statistic.GetAllStatistics();
 
                 for (int i = 0; i < userStatistics.Count; i++)
                 {
                     userStatistics[i].Id = GetRandomItemStatistic(i);
                 }
+
+                CalculationStatistics?.Invoke(null, userStatistics);
 
                 while (userStatistics.Count > 0)
                 {
@@ -132,15 +102,7 @@ namespace CTournament.ViewModels
             _statistic.Init();
 
             if (_currentListReplays != null)
-            {
-                foreach (Models.TournamentReplay replay in _currentListReplays)
-                {
-                    foreach (Models.CReplay.Players.PlayersInfo itemInfo in replay.PlayersData)
-                    {
-                        _statistic.AddData(itemInfo);
-                    }
-                }
-            }
+                _statistic.FillDataReplays(_currentListReplays);
         }
 
         private void InitFrame()
@@ -184,15 +146,5 @@ namespace CTournament.ViewModels
             return UserStatisticsItem.ListUserStatisticsItemID[id];
         }
 
-        private class ItemUserStatisticsItemUpdater
-        {
-            public ItemUserStatisticsItemUpdater(Func<List<Models.UserStatisticsItemValueItem>> getValueAction)
-            {
-                GetValueAction = getValueAction;
-            }
-
-            internal int Id { get; set; }
-            internal Func<List<Models.UserStatisticsItemValueItem>> GetValueAction { get; set; }
-        }
     }
 }

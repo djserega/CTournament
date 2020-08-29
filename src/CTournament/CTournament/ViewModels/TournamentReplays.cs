@@ -33,7 +33,7 @@ namespace CTournament.ViewModels
         }
 
         public ICollectionView Replays { get; set; }
-
+        
         public bool ReplaysUpdating { get; private set; } = false;
 
         public Visibility VisibilityReplaysUpdating { get => ReplaysUpdating ? Visibility.Visible : Visibility.Collapsed; }

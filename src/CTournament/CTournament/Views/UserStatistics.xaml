@@ -49,12 +49,12 @@
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"
                            Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
-                           Text="Сумма по игрокам"/>
+                           Text="Суммарно по игрокам"/>
                     <TextBlock Grid.Row="3"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"
                            Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
-                           Text="Сумма по оперативникам"/>
+                           Text="Суммарно по оперативникам"/>
                 </Grid>
 
                 <!--#region UserStatistics1 -->

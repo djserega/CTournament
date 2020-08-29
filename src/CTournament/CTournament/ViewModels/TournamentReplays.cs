@@ -33,12 +33,22 @@ namespace CTournament.ViewModels
         }
 
         public ICollectionView Replays { get; set; }
-        
+
         public bool ReplaysUpdating { get; private set; } = false;
 
         public Visibility VisibilityReplaysUpdating { get => ReplaysUpdating ? Visibility.Visible : Visibility.Collapsed; }
 
         public int CountRepays { get; private set; } = 0;
+
+        public string CountRepaysText
+        {
+            get
+            {
+                string textProgress = $"          {CountRepays}";
+
+                return textProgress.Substring(textProgress.Length - CountAllReplays.ToString().Length - 1);
+            }
+        }
 
         public int CountAllReplays { get; private set; } = 0;
 
@@ -51,7 +61,7 @@ namespace CTournament.ViewModels
                 if (CountRepays == 0 && CountAllReplays == 0)
                     return "Подготовка к загрузке";
                 else
-                    return $"Загрузка данных: {CountRepays}/{CountAllReplays}";
+                    return $"Загрузка данных:";
             }
         }
 
@@ -66,7 +76,7 @@ namespace CTournament.ViewModels
 
             List<Models.TournamentReplay> tournamentReplays = Replays.Cast<Models.TournamentReplay>().ToList();
 
-            SaveToExcel.Saving saveToExcel = new SaveToExcel.Saving() 
+            SaveToExcel.Saving saveToExcel = new SaveToExcel.Saving()
             {
                 FileName = _currentTournametDirectory.Name
             };

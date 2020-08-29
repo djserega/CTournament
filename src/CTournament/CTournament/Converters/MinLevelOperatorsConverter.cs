@@ -13,7 +13,7 @@ namespace CTournament.Converters
         {
             return (int)value <= 20 ?
                         new SolidColorBrush(Colors.OrangeRed)
-                        : new SolidColorBrush(Colors.White);
+                        : null;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

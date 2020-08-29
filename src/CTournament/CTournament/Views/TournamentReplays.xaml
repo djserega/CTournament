@@ -127,11 +127,29 @@
         
         <Grid HorizontalAlignment="Center"
               Visibility="{Binding VisibilityReplaysUpdating}">
-            <Button Content="{Binding TextUpdatingMessage}"
-                    Style="{StaticResource MaterialDesignRaisedButton}"
-                    HorizontalAlignment="Left"
+            
+            <Button Style="{StaticResource MaterialDesignRaisedButton}"
                     md:ButtonProgressAssist.Value="{Binding ProgressLoadingReplays}"
-                    md:ButtonProgressAssist.IsIndicatorVisible="True"/>
+                    md:ButtonProgressAssist.IsIndicatorVisible="True">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0"
+                               Text="{Binding TextUpdatingMessage}"/>
+                    <TextBlock Grid.Column="1"
+                               Text="{Binding CountRepaysText}"/>
+                    <TextBlock Grid.Column="2"
+                               Text=" / "/>
+                    <TextBlock Grid.Column="3"
+                               Text="{Binding CountAllReplays}"/>
+
+                </Grid>
+            </Button>
         </Grid>
 
         <Grid HorizontalAlignment="Right"

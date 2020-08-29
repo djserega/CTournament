@@ -6,13 +6,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CTournament" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="CTournament by GOD" Height="700" Width="1600">
+        Title="CTournament by GOD"
+        Height="700"
+        Width="1600">
     <Grid Margin="2">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="10"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+
+        <Grid Grid.ColumnSpan="3"
+              Margin="40">
+            <Grid.Background>
+                <ImageBrush Opacity=".15" ImageSource="/caliber-black.png" Stretch="Uniform" TileMode="None"/>
+            </Grid.Background>
+            <TextBlock HorizontalAlignment="Right"
+                       VerticalAlignment="Bottom"
+                       Margin="-35 0 0 -37"
+                       FontSize="10"
+                       Opacity=".2"
+                       Text="CTournament by Ghosts Of Destruction"/>
+        </Grid>
 
         <Grid Grid.Column="0">
             <Grid.RowDefinitions>
@@ -115,6 +130,7 @@
 
                 <Expander Grid.Row="2"
                           HorizontalAlignment="Stretch"
+                          Background="{x:Null}"
                           Header="Личный зачет">
                     <Frame Content="{Binding UserStatistics}"/>
                 </Expander>

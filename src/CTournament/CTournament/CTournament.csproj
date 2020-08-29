@@ -10,6 +10,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="caliber-black.png" />
+    <None Remove="caliber-white.png" />
     <None Remove="Resources\arrow-down.png" />
     <None Remove="Resources\arrow-up.png" />
     <None Remove="Resources\NameMaps.json" />
@@ -46,6 +48,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="caliber-black.png" />
+    <Resource Include="caliber-white.png" />
     <Resource Include="Resources\arrow-down.png" />
     <Resource Include="Resources\arrow-up.png" />
   </ItemGroup>

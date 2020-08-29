@@ -144,12 +144,12 @@
             </Grid>
         </ScrollViewer>
 
-        <Button Background="{StaticResource SecondaryAccentBrush}"
+        <!--<Button Background="{StaticResource SecondaryAccentBrush}"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Right"
                 Content="{md:PackIcon Kind=Refresh}"
                 Margin="5 5 25 5"
-                Command="{Binding UpdateCommand}"/>
+                Command="{Binding UpdateCommand}"/>-->
 
     </Grid>
 </Page>

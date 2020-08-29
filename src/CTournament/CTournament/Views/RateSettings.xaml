@@ -390,7 +390,8 @@
             <TextBlock Grid.Column="0"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" 
-                       Text="{Binding Formula.FormulaTemplate}"/>
+                       Text="{Binding Formula.FormulaTemplate}"
+                       ToolTip="{Binding Formula.Formula}"/>
             <Label Grid.Column="1"
                    Content=" = "
                    FontWeight="Bold"
@@ -416,7 +417,8 @@
                    Source="/Resources/arrow-up.png"
                    ToolTip="Отобразить формулу"
                    Height="15"
-                   Visibility="{Binding VisibilityPanel.VisibilityBorderLegentUp, Mode=OneWay}">
+                   Visibility="{Binding VisibilityPanel.VisibilityBorderLegentUp, Mode=OneWay}"
+                   Style="{StaticResource ImageStyleHand}">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="MouseLeftButtonDown">
                         <i:InvokeCommandAction Command="{Binding VisibilityPanel.CommandChangeVisibility}" />
@@ -434,7 +436,8 @@
                    Source="/Resources/arrow-down.png"
                    ToolTip="Скрыть формулу"
                    Height="15"
-                   Visibility="{Binding VisibilityPanel.VisibilityBorderLegentDown, Mode=OneWay}">
+                   Visibility="{Binding VisibilityPanel.VisibilityBorderLegentDown, Mode=OneWay}"
+                   Style="{StaticResource ImageStyleHand}">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="MouseLeftButtonDown">
                         <i:InvokeCommandAction Command="{Binding VisibilityPanel.CommandChangeVisibility}" />

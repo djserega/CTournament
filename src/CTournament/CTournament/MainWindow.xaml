@@ -38,16 +38,16 @@
 
                 <Image Grid.Row="0" 
                        Source="/Resources/arrow-up.png"
-                       ToolTip="Отобразить параметры расчета и тестовые данные."
+                       ToolTip="Отобразить параметры расчета и эталонные данные"
                        Height="15"
                        Width="200"
-                       Visibility="{Binding VisibilityPanel.VisibilityBorderLegentUp, Mode=OneWay}">
+                       Visibility="{Binding VisibilityPanel.VisibilityBorderLegentUp, Mode=OneWay}"
+                       Style="{StaticResource ImageStyleHand}">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="MouseLeftButtonDown">
                             <i:InvokeCommandAction Command="{Binding VisibilityPanel.CommandChangeVisibility}" />
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
-
                 </Image>
 
                 <!--<Border Grid.Row="1"
@@ -56,10 +56,11 @@
 
                 <Image Grid.Row="2"
                        Source="/Resources/arrow-down.png"
-                       ToolTip="Скрыть параметры расчета и тестовые данные."
+                       ToolTip="Скрыть параметры расчета и эталонные данные"
                        Height="15"
                        Width="200"
-                       Visibility="{Binding VisibilityPanel.VisibilityBorderLegentDown, Mode=OneWay}">
+                       Visibility="{Binding VisibilityPanel.VisibilityBorderLegentDown, Mode=OneWay}"
+                       Style="{StaticResource ImageStyleHand}">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="MouseLeftButtonDown">
                             <i:InvokeCommandAction Command="{Binding VisibilityPanel.CommandChangeVisibility}" />
@@ -99,11 +100,11 @@
                     Margin="1"
                     BorderBrush="Orange">
 
-                    <!--<Expander HorizontalAlignment="Stretch"
+                <!--<Expander HorizontalAlignment="Stretch"
                               Header="Реплеи"
                               IsExpanded="True">-->
-                        <Frame Content="{Binding TournamentReplays}"/>
-                    <!--</Expander>-->
+                <Frame Content="{Binding TournamentReplays}"/>
+                <!--</Expander>-->
 
             </Border>
 

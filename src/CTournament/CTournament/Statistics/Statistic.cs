@@ -104,13 +104,16 @@ namespace CTournament.Statistics
             _dictSumHealedOperators.Clear();
         }
 
-        internal void FillDataReplays(List<Models.TournamentReplay> replays)
+        internal void FillDataReplays(List<Models.TournamentReplay> replays, bool isCurrentUser = false)
         {
             foreach (Models.TournamentReplay replay in replays)
             {
                 foreach (Models.CReplay.Players.PlayersInfo itemInfo in replay.PlayersData)
                 {
-                    AddData(itemInfo);
+                    if (isCurrentUser && itemInfo.PlayersDataInfo.IsCurrentUser)
+                        AddData(itemInfo);
+                    else if (!isCurrentUser)
+                        AddData(itemInfo);
                 }
             }
         }

@@ -83,7 +83,22 @@ namespace CTournament.ViewModels
             saveToExcel.SaveList(tournamentReplays);
         });
 
-        public ICommand RefreshListReplaysCommand => new DelegateCommand(async () => { await UpdateListReplaysAsync(); });
+         public ICommand SaveReplaysToExcelIsCurrentUserCommand => new DelegateCommand(() =>
+        {
+            if (Replays == null)
+                return;
+
+            List<Models.TournamentReplay> tournamentReplays = Replays.Cast<Models.TournamentReplay>().ToList();
+
+            SaveToExcel.Saving saveToExcel = new SaveToExcel.Saving()
+            {
+                FileName = _currentTournametDirectory.Name,
+                IsCurrentUser = true
+            };
+            saveToExcel.SaveList(tournamentReplays);
+        });
+
+       public ICommand RefreshListReplaysCommand => new DelegateCommand(async () => { await UpdateListReplaysAsync(); });
 
         private async Task UpdateListReplaysAsync()
         {

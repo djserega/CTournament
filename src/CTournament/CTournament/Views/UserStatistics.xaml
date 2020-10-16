@@ -144,12 +144,29 @@
             </Grid>
         </ScrollViewer>
 
-        <!--<Button Background="{StaticResource SecondaryAccentBrush}"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Right"
-                Content="{md:PackIcon Kind=Refresh}"
-                Margin="5 5 25 5"
-                Command="{Binding UpdateCommand}"/>-->
+        <Grid Margin="5 5 25 5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0"
+                        Orientation="Horizontal"
+                        Margin="0 -25 2 25"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom">
+                <Label Content="Персональный зачет капитанов"/>
+                <CheckBox IsChecked="{Binding IsCurrentUser}"/>
+            </StackPanel>
+
+            <!--<Button Grid.Row="1"
+                    Background="{StaticResource SecondaryAccentBrush}"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right"
+                    Content="{md:PackIcon Kind=Refresh}"
+                    Command="{Binding UpdateCommand}"/>-->
+
+        </Grid>
 
     </Grid>
 </Page>

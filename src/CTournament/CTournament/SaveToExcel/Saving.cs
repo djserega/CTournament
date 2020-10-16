@@ -12,7 +12,17 @@ namespace CTournament.SaveToExcel
     internal class Saving
     {
         internal string FileName { get; set; } = "CTournament";
-        internal string FileNameWithExtension { get => $"{FileName}.xlsx"; }
+        internal string FileNameWithExtension
+        {
+            get
+            {
+                if (IsCurrentUser)
+                    return $"{FileName} (персональный зачет авторов).xlsx";
+                else
+                    return $"{FileName}.xlsx";
+            }
+        }
+        internal bool IsCurrentUser { get; set; }
 
         internal void SaveList(List<Models.TournamentReplay> tournamentReplays)
         {
@@ -22,7 +32,7 @@ namespace CTournament.SaveToExcel
             mainStatistics.SaveMainStatistics(workbook);
 
             PersonalStatistics personalStatistics = new PersonalStatistics() { TournamentReplays = tournamentReplays };
-            personalStatistics.SavePersonalStatistics(workbook);
+            personalStatistics.SavePersonalStatistics(workbook, IsCurrentUser);
 
             try
             {

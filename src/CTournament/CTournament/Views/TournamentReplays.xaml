@@ -104,6 +104,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Button Grid.Row="0"
                     HorizontalAlignment="Right"
@@ -123,6 +124,21 @@
                     Content="{md:PackIcon Kind=MicrosoftExcel}"
                     ToolTip="Сохранить расчет в каталог"
                     Command="{Binding SaveReplaysToExcelCommand}"/>
+            <Button Grid.Row="2"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="5"
+                    Background="{StaticResource SecondaryAccentBrush}"
+                    BorderThickness="0"
+                    Content="{md:PackIcon Kind=MicrosoftExcel}"
+                    ToolTip="Сохранить расчет в каталог (персональный зачет авторов)"
+                    Command="{Binding SaveReplaysToExcelIsCurrentUserCommand}"/>
+            <Label Grid.Row="2"
+                   HorizontalAlignment="Right"
+                   Margin="0 0 7 1"
+                   FontSize="8"
+                   VerticalAlignment="Bottom"
+                   Content="капитаны"/>
         </Grid>
         
         <Grid HorizontalAlignment="Center"

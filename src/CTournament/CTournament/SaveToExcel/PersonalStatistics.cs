@@ -17,11 +17,11 @@ namespace CTournament.SaveToExcel
 
         internal List<Models.TournamentReplay> TournamentReplays { get; set; }
 
-        internal void SavePersonalStatistics(XLWorkbook workbook)
+        internal void SavePersonalStatistics(XLWorkbook workbook, bool isCurrentUser = false)
         {
             Statistics.Statistic statistic = new Statistics.Statistic();
             statistic.Init();
-            statistic.FillDataReplays(TournamentReplays);
+            statistic.FillDataReplays(TournamentReplays, isCurrentUser);
 
 
             List<Models.ItemUserStatisticsItemUpdater> itemUserStatistics = statistic.GetAllStatistics();

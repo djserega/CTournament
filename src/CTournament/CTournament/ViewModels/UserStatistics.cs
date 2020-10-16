@@ -18,6 +18,7 @@ namespace CTournament.ViewModels
 
         private readonly Statistics.Statistic _statistic = new Statistics.Statistic();
         private List<Models.TournamentReplay> _currentListReplays;
+        private bool isCurrentUser = false;
 
         public UserStatistics()
         {
@@ -28,6 +29,16 @@ namespace CTournament.ViewModels
             };
             InitFrame();
             UpdateInfo();
+        }
+
+        public bool IsCurrentUser
+        {
+            get => isCurrentUser;
+            set
+            {
+                isCurrentUser = value;
+                Task.Run(() => UpdateInfoAsync());
+            }
         }
 
         public string UserStatistics1Header { get; set; }
@@ -102,7 +113,7 @@ namespace CTournament.ViewModels
             _statistic.Init();
 
             if (_currentListReplays != null)
-                _statistic.FillDataReplays(_currentListReplays);
+                _statistic.FillDataReplays(_currentListReplays, IsCurrentUser);
         }
 
         private void InitFrame()

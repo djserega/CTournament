@@ -33,7 +33,7 @@ namespace CTournament.Errors
             Path = path;
         }
 
-        public string Message { get; set; }
+        public string Message { get; set; } = string.Empty;
         public ErrorType Type { get; set; } = ErrorType.Normal;
         public PackIcon ImageType
         {

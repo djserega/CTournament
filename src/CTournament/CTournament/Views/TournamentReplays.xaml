@@ -76,7 +76,7 @@
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Header="Id"             Binding="{Binding UserId, StringFormat=\{0:### ### ###\}}"  CellStyle="{StaticResource CellStyleHorizontalRight}"/>
                                     <DataGridTextColumn Header="Никнейм"        Binding="{Binding PlayersDataInfo.Nickname}"/>
-                                    <DataGridTextColumn Header="Оперативник"    Binding="{Binding VisualNameRu}"/>
+                                    <DataGridTextColumn Header="Оперативник"    Binding="{Binding CoreGameCfg.ClientCard.VisualNameRu}"/>
                                     <DataGridTextColumn Header="Уровень"        Binding="{Binding Level}"                                   CellStyle="{StaticResource CellStyleHorizontalCenter}"/>
                                     <DataGridTextColumn Header="Ликвидировал"   Binding="{Binding PlayersDataInfo.AllKills}"                CellStyle="{StaticResource CellStyleHorizontalRight}"/>
                                     <DataGridTextColumn Header="Погиб"          Binding="{Binding PlayersDataInfo.Deaths}"                  CellStyle="{StaticResource CellStyleHorizontalRight}"/>

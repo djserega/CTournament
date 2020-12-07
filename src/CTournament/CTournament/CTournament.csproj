@@ -34,10 +34,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\CReplay\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Include="Resources\NameMaps.json" />
     <EmbeddedResource Include="Resources\NameMissions.json" />
     <EmbeddedResource Include="Resources\NameOperators.json" />

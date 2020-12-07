@@ -123,60 +123,60 @@ namespace CTournament.Statistics
             #region PlayerKills
 
             AddDataToDictionary(_dictPlayerKillsUser, playersInfo.NickName, playersInfo.PlayersDataInfo.PlayerKills);
-            AddDataToDictionary(_dictPlayerKillsOperators, playersInfo.VisualNameRu, playersInfo.PlayersDataInfo.PlayerKills);
+            AddDataToDictionary(_dictPlayerKillsOperators, playersInfo.CoreGameCfg.ClientCard.VisualNameRu, playersInfo.PlayersDataInfo.PlayerKills);
 
             AddDataToDictionary(_dictSumPlayerKillsUser, playersInfo.NickName, playersInfo.PlayersDataInfo.PlayerKills, true);
-            AddDataToDictionary(_dictSumPlayerKillsOperators, playersInfo.VisualNameRu, playersInfo.PlayersDataInfo.PlayerKills, true);
+            AddDataToDictionary(_dictSumPlayerKillsOperators, playersInfo.CoreGameCfg.ClientCard.VisualNameRu, playersInfo.PlayersDataInfo.PlayerKills, true);
 
             #endregion
 
             #region BotKills
 
             AddDataToDictionary(_dictBotKillsUser, playersInfo.NickName, playersInfo.PlayersDataInfo.BotKills);
-            AddDataToDictionary(_dictBotKillsOperators, playersInfo.VisualNameRu, playersInfo.PlayersDataInfo.BotKills);
+            AddDataToDictionary(_dictBotKillsOperators, playersInfo.CoreGameCfg.ClientCard.VisualNameRu, playersInfo.PlayersDataInfo.BotKills);
 
             AddDataToDictionary(_dictSumBotKillsUser, playersInfo.NickName, playersInfo.PlayersDataInfo.BotKills, true);
-            AddDataToDictionary(_dictSumBotKillsOperators, playersInfo.VisualNameRu, playersInfo.PlayersDataInfo.BotKills, true);
+            AddDataToDictionary(_dictSumBotKillsOperators, playersInfo.CoreGameCfg.ClientCard.VisualNameRu, playersInfo.PlayersDataInfo.BotKills, true);
 
             #endregion
 
             #region Death
 
             AddDataToDictionary(_dictDeathUser, playersInfo.NickName, playersInfo.PlayersDataInfo.Deaths);
-            AddDataToDictionary(_dictDeathOperators, playersInfo.VisualNameRu, playersInfo.PlayersDataInfo.Deaths);
+            AddDataToDictionary(_dictDeathOperators, playersInfo.CoreGameCfg.ClientCard.VisualNameRu, playersInfo.PlayersDataInfo.Deaths);
 
             AddDataToDictionary(_dictSumDeathUser, playersInfo.NickName, playersInfo.PlayersDataInfo.Deaths, true);
-            AddDataToDictionary(_dictSumDeathOperators, playersInfo.VisualNameRu, playersInfo.PlayersDataInfo.Deaths, true);
+            AddDataToDictionary(_dictSumDeathOperators, playersInfo.CoreGameCfg.ClientCard.VisualNameRu, playersInfo.PlayersDataInfo.Deaths, true);
 
             #endregion
 
             #region Assist
 
             AddDataToDictionary(_dictAssistUser, playersInfo.NickName, playersInfo.PlayersDataInfo.Assists);
-            AddDataToDictionary(_dictAssistOperators, playersInfo.VisualNameRu, playersInfo.PlayersDataInfo.Assists);
+            AddDataToDictionary(_dictAssistOperators, playersInfo.CoreGameCfg.ClientCard.VisualNameRu, playersInfo.PlayersDataInfo.Assists);
 
             AddDataToDictionary(_dictSumAssistUser, playersInfo.NickName, playersInfo.PlayersDataInfo.Assists, true);
-            AddDataToDictionary(_dictSumAssistOperators, playersInfo.VisualNameRu, playersInfo.PlayersDataInfo.Assists, true);
+            AddDataToDictionary(_dictSumAssistOperators, playersInfo.CoreGameCfg.ClientCard.VisualNameRu, playersInfo.PlayersDataInfo.Assists, true);
 
             #endregion
 
             #region DamageDealt
 
             AddDataToDictionary(_dictDamageDealtUser, playersInfo.NickName, playersInfo.PlayersDataInfo.DamageDealt);
-            AddDataToDictionary(_dictDamageDealtOperators, playersInfo.VisualNameRu, playersInfo.PlayersDataInfo.DamageDealt);
+            AddDataToDictionary(_dictDamageDealtOperators, playersInfo.CoreGameCfg.ClientCard.VisualNameRu, playersInfo.PlayersDataInfo.DamageDealt);
 
             AddDataToDictionary(_dictSumDamageDealtUser, playersInfo.NickName, playersInfo.PlayersDataInfo.DamageDealt, true);
-            AddDataToDictionary(_dictSumDamageDealtOperators, playersInfo.VisualNameRu, playersInfo.PlayersDataInfo.DamageDealt, true);
+            AddDataToDictionary(_dictSumDamageDealtOperators, playersInfo.CoreGameCfg.ClientCard.VisualNameRu, playersInfo.PlayersDataInfo.DamageDealt, true);
 
             #endregion
 
             #region Healed
 
             AddDataToDictionary(_dictHealedUser, playersInfo.NickName, playersInfo.PlayersDataInfo.HitPointHealed);
-            AddDataToDictionary(_dictHealedOperators, playersInfo.VisualNameRu, playersInfo.PlayersDataInfo.HitPointHealed);
+            AddDataToDictionary(_dictHealedOperators, playersInfo.CoreGameCfg.ClientCard.VisualNameRu, playersInfo.PlayersDataInfo.HitPointHealed);
 
             AddDataToDictionary(_dictSumHealedUser, playersInfo.NickName, playersInfo.PlayersDataInfo.HitPointHealed, true);
-            AddDataToDictionary(_dictSumHealedOperators, playersInfo.VisualNameRu, playersInfo.PlayersDataInfo.HitPointHealed, true);
+            AddDataToDictionary(_dictSumHealedOperators, playersInfo.CoreGameCfg.ClientCard.VisualNameRu, playersInfo.PlayersDataInfo.HitPointHealed, true);
 
             #endregion
 

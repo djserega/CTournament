@@ -13,29 +13,20 @@ namespace CTournament.Models.CReplay.Players
     {
         public long UserId { get; set; }
         public string NickName { get; set; }
-        public int Role { get; set; }
-        public string UserBar { get; set; }
-        public string Visual { get; set; }
-        public ConsumablesInfo Consumables { get; set; }
-        public int TeamId { get; set; }
         public int Level { get; set; }
+        public string UserBar { get; set; }
         public bool HasPremium { get; set; }
-        public bool HasFamerBonus { get; set; }
-        public int CardType { get; set; }
-        public int NumOpenedModules { get; set; }
-        public string LocalesKeys { get; set; }
+        public int TeamId { get; set; }
+        public int RankedSeasonPoints { get; set; }
+        public int RrankedSeasonNumBattles { get; set; }
+        public CoreGameCfg CoreGameCfg { get; set; }
 
         [NotMapped]
-        public string RoleView { get; set; }
-        [NotMapped]
         public PlayersDataInfo PlayersDataInfo { get; set; }
-        [NotMapped]
-        public string VisualNameRu { get; set; }
 
         public static void FillObject(PlayersInfo playersInfo)
         {
-            playersInfo.RoleView = Enum.GetName(typeof(RoleOperatorsEnumRu), playersInfo.Role);
-            playersInfo.VisualNameRu = DictionaryTemplates.GetNameOperator(playersInfo.Visual);
+            CoreGameCfg.FillObject(playersInfo.CoreGameCfg);
         }
     }
 }

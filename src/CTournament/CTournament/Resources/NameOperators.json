@@ -156,5 +156,25 @@
   "PL_USA_Seal2014_A_ES1": "Корсар",
   "PL_USA_Seal2014_G_ES1": "Бурбон",
   "PL_USA_Seal2014_M_ES1": "Монк",
-  "PL_USA_Seal2014_S_ES1": "Скаут"
+  "PL_USA_Seal2014_S_ES1": "Скаут",
+
+  "PL_ISR_NESHER2015_A": "Афела",
+  "PL_ISR_NESHER2015_G": "Хагана",
+  "PL_ISR_NESHER2015_M": "Шаршерет",
+  "PL_ISR_NESHER2015_S": "Эйма",
+
+  "PL_ISR_NESHER2015_A_LS": "Афела",
+  "PL_ISR_NESHER2015_G_LS": "Хагана",
+  "PL_ISR_NESHER2015_M_LS": "Шаршерет",
+  "PL_ISR_NESHER2015_S_LS": "Эйма",
+
+  "PL_ISR_NESHER2015_A_ES": "Афела",
+  "PL_ISR_NESHER2015_G_ES": "Хагана",
+  "PL_ISR_NESHER2015_M_ES": "Шаршерет",
+  "PL_ISR_NESHER2015_S_ES": "Эйма",
+
+  "PL_ISR_NESHER2015_A_ES1": "Афела",
+  "PL_ISR_NESHER2015_G_ES1": "Хагана",
+  "PL_ISR_NESHER2015_M_ES1": "Шаршерет",
+  "PL_ISR_NESHER2015_S_ES1": "Эйма"
 }

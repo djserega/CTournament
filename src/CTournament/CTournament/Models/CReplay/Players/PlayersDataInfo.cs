@@ -5,7 +5,7 @@ namespace CTournament.Models.CReplay.Players
     public class PlayersDataInfo
     {
         public int GameId { get; set; }
-        public int MetaId { get; set; }
+        public long MetaId { get; set; }
         public int Level { get; set; }
         public bool HasPremium { get; set; }
         public int Role { get; set; }

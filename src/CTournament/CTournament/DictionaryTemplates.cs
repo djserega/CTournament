@@ -44,6 +44,9 @@ namespace CTournament
         {
             string name = _nameElemetnByDefault;
 
+            if (string.IsNullOrEmpty(key))
+                key = "<не найдено>";
+
 #if DEBUG
             name += " (" + key + ")";
 #endif

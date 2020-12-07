@@ -187,7 +187,7 @@ namespace CTournament.ViewModels
         {
             foreach (Models.CReplay.Players.PlayersInfo player in players)
             {
-                if (player.Visual.Contains("PL_RUS_Recruit_", StringComparison.OrdinalIgnoreCase))
+                if (player.Visual?.Contains("PL_RUS_Recruit_", StringComparison.OrdinalIgnoreCase) ?? false)
                     return true;
             }
 

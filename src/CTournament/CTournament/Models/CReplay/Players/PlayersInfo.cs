@@ -11,7 +11,7 @@ namespace CTournament.Models.CReplay.Players
 {
     public class PlayersInfo
     {
-        public int UserId { get; set; }
+        public long UserId { get; set; }
         public string NickName { get; set; }
         public int Role { get; set; }
         public string UserBar { get; set; }

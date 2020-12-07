@@ -18,6 +18,7 @@ namespace CTournament
             services.AddSingleton<ViewModels.TournamentReplays>();
             services.AddSingleton<ViewModels.UserStatistics>();
             services.AddSingleton<ViewModels.RateSettings>();
+            services.AddSingleton<ViewModels.CrashApp>();
 
             services.AddTransient<ViewModels.UserStatisticsItem>();
 
@@ -32,6 +33,7 @@ namespace CTournament
         public ViewModels.TournamentReplays TournamentReplays => _serviceProvider.GetRequiredService<ViewModels.TournamentReplays>();
         public ViewModels.UserStatistics UserStatistics => _serviceProvider.GetRequiredService<ViewModels.UserStatistics>();
         public ViewModels.RateSettings RateSettings => _serviceProvider.GetRequiredService<ViewModels.RateSettings>();
+        public ViewModels.CrashApp CrashApp => _serviceProvider.GetRequiredService<ViewModels.CrashApp>();
 
         public ViewModels.UserStatisticsItem UserStatisticsItem => _serviceProvider.GetRequiredService<ViewModels.UserStatisticsItem>();
     }

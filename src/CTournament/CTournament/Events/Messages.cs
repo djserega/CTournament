@@ -6,7 +6,9 @@ namespace CTournament.Events
     internal class Messages
     {
         internal static event EventHandler<Errors.Error> ErrorMessage;
-        
+        internal static event EventHandler<Models.CrashApp> EnterceptedCriticalErrors;
+
+
         internal static void SendMessage(object sender, string message)
         {
             SendMessage(sender, message, Errors.ErrorType.Normal);
@@ -29,6 +31,17 @@ namespace CTournament.Events
                        Errors.Error error = new Errors.Error(message, type, path);
 
                        ErrorMessage?.Invoke(sender, error);
+                   });
+            }
+        }
+        internal static void SendCrashMessage(object sender, string header, string message)
+        {
+            if (!string.IsNullOrWhiteSpace(message))
+            {
+                DispatcherHelper.CheckBeginInvokeOnUI(
+                   () =>
+                   {
+                       EnterceptedCriticalErrors?.Invoke(null, new Models.CrashApp(header, message));
                    });
             }
         }

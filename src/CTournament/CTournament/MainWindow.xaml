@@ -9,135 +9,163 @@
         Title="CTournament by GOD"
         Height="700"
         Width="1600">
-    <Grid Margin="2">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="10"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+    <Grid>
+        <Grid Margin="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
-        <Grid Grid.ColumnSpan="3"
+            <Grid Grid.ColumnSpan="3"
               Margin="40">
-            <Grid.Background>
-                <ImageBrush Opacity=".15" ImageSource="/caliber-black.png" Stretch="Uniform" TileMode="None"/>
-            </Grid.Background>
-            <TextBlock HorizontalAlignment="Right"
+                <Grid.Background>
+                    <ImageBrush Opacity=".15" ImageSource="/caliber-black.png" Stretch="Uniform" TileMode="None"/>
+                </Grid.Background>
+                <TextBlock HorizontalAlignment="Right"
                        VerticalAlignment="Bottom"
                        Margin="-35 0 0 -37"
                        FontSize="10"
                        Opacity=".2"
                        Text="CTournament by Ghosts Of Destruction"/>
-        </Grid>
+            </Grid>
 
-        <Grid Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-            </Grid.RowDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
 
-            <Border Grid.Row="0"
+                <Border Grid.Row="0"
                     BorderThickness="1"
                     Margin="1"
                     BorderBrush="Orange">
-                <Frame Content="{Binding TournamentDirectory}"/>
-            </Border>
+                    <Frame Content="{Binding TournamentDirectory}"/>
+                </Border>
 
-            <Grid Grid.Row="1"
+                <Grid Grid.Row="1"
                   Margin="0 5">
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
 
-                <Image Grid.Row="0" 
+                    <Image Grid.Row="0" 
                        Source="/Resources/arrow-up.png"
                        ToolTip="Отобразить параметры расчета и эталонные данные"
                        Height="15"
                        Width="200"
                        Visibility="{Binding VisibilityPanel.VisibilityBorderLegentUp, Mode=OneWay}"
                        Style="{StaticResource ImageStyleHand}">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="MouseLeftButtonDown">
-                            <i:InvokeCommandAction Command="{Binding VisibilityPanel.CommandChangeVisibility}" />
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                </Image>
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseLeftButtonDown">
+                                <i:InvokeCommandAction Command="{Binding VisibilityPanel.CommandChangeVisibility}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Image>
 
-                <!--<Border Grid.Row="1"
+                    <!--<Border Grid.Row="1"
                         BorderThickness="1"
                         BorderBrush="Orange"/>-->
 
-                <Image Grid.Row="2"
+                    <Image Grid.Row="2"
                        Source="/Resources/arrow-down.png"
                        ToolTip="Скрыть параметры расчета и эталонные данные"
                        Height="15"
                        Width="200"
                        Visibility="{Binding VisibilityPanel.VisibilityBorderLegentDown, Mode=OneWay}"
                        Style="{StaticResource ImageStyleHand}">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="MouseLeftButtonDown">
-                            <i:InvokeCommandAction Command="{Binding VisibilityPanel.CommandChangeVisibility}" />
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseLeftButtonDown">
+                                <i:InvokeCommandAction Command="{Binding VisibilityPanel.CommandChangeVisibility}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
 
-                </Image>
-            </Grid>
+                    </Image>
+                </Grid>
 
-            <Border Grid.Row="2"
+                <Border Grid.Row="2"
                     BorderThickness="1"
                     Margin="1"
                     BorderBrush="Orange"
                     Visibility="{Binding VisibilityPanel.VisibilityBorderLegentDown, Mode=OneWay}">
-                <Frame Content="{Binding RateSettings}"/>
-            </Border>
+                    <Frame Content="{Binding RateSettings}"/>
+                </Border>
 
-        </Grid>
+            </Grid>
 
-        <Grid Grid.Column="1">
+            <Grid Grid.Column="1">
 
-            <Border BorderThickness="1"
+                <Border BorderThickness="1"
                     Width="2"
                     Margin="0 5"
                     BorderBrush="Orange"/>
 
-        </Grid>
+            </Grid>
 
-        <Grid Grid.Column="2">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition Height="auto"/>
-            </Grid.RowDefinitions>
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
 
-            <Border Grid.Row="0"
+                <Border Grid.Row="0"
                     BorderThickness="1"
                     Margin="1"
                     BorderBrush="Orange">
 
-                <!--<Expander HorizontalAlignment="Stretch"
+                    <!--<Expander HorizontalAlignment="Stretch"
                               Header="Реплеи"
                               IsExpanded="True">-->
-                <Frame Content="{Binding TournamentReplays}"/>
-                <!--</Expander>-->
+                    <Frame Content="{Binding TournamentReplays}"/>
+                    <!--</Expander>-->
 
-            </Border>
+                </Border>
 
-            <Border Grid.Row="1"
+                <Border Grid.Row="1"
                     BorderThickness="1"
                     Margin="1"
                     BorderBrush="Orange">
 
-                <Expander Grid.Row="2"
+                    <Expander Grid.Row="2"
                           HorizontalAlignment="Stretch"
                           Background="{x:Null}"
                           Header="Личный зачет">
-                    <Frame Content="{Binding UserStatistics}"/>
-                </Expander>
+                        <Frame Content="{Binding UserStatistics}"/>
+                    </Expander>
 
-            </Border>
+                </Border>
+
+            </Grid>
 
         </Grid>
 
+        <Border CornerRadius="5"
+                MinWidth="500"
+                MaxHeight="500"
+                MinHeight="300"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Background="WhiteSmoke"
+                Visibility="{Binding VisibilityCrashAppView}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Row="0"
+                        Margin="0 5"
+                        HorizontalAlignment="Center"
+                        Content="Закрыть"
+                        Command="{Binding ChangeVisibilityCrashAppViewCommand}"/>
+                <Frame Grid.Row="1"
+                       Margin="5"
+                       Content="{Binding CrashAppView}"/>
+
+            </Grid>
+        </Border>
     </Grid>
 </Window>

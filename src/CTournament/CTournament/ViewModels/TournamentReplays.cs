@@ -102,7 +102,17 @@ namespace CTournament.ViewModels
 
         private async Task UpdateListReplaysAsync()
         {
-            await Task.Run(() => UpdateListReplays(_currentTournametDirectory));
+            try
+            {
+                await Task.Run(() => UpdateListReplays(_currentTournametDirectory));
+            }
+            catch (Exception ex)
+            {
+                Events.Messages.SendCrashMessage(
+                    null,
+                    "Ошибка при чтении каталога реплеев.",
+                    ex.ToString());
+            }
         }
 
         private void UpdateListReplays(Models.TournamentsDirectory directory)

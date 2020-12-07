@@ -18,10 +18,7 @@
     <None Remove="Resources\NameMissions.json" />
     <None Remove="Resources\NameOperators.json" />
     <None Remove="Resources\TypesMission.json" />
-    <None Include="C:\Users\DJSerega\Pictures\ctournament.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
+    <None Remove="warning.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -52,6 +49,7 @@
     <Resource Include="caliber-white.png" />
     <Resource Include="Resources\arrow-down.png" />
     <Resource Include="Resources\arrow-up.png" />
+    <Resource Include="warning.png" />
   </ItemGroup>
 
 </Project>

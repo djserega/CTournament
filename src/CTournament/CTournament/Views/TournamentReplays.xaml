@@ -74,7 +74,7 @@
                                       AutoGenerateColumns="False"
                                       Margin="100 5">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Id"             Binding="{Binding UserId, StringFormat=\{0:### ### ###\}}"  CellStyle="{StaticResource CellStyleHorizontalRight}"/>
+                                    <DataGridTextColumn Header="Id"             Binding="{Binding UserId, StringFormat=\{0:### ### ### ###\}}"  CellStyle="{StaticResource CellStyleHorizontalRight}"/>
                                     <DataGridTextColumn Header="Никнейм"        Binding="{Binding PlayersDataInfo.Nickname}"/>
                                     <DataGridTextColumn Header="Оперативник"    Binding="{Binding CoreGameCfg.ClientCard.VisualNameRu}"/>
                                     <DataGridTextColumn Header="Уровень"        Binding="{Binding Level}"                                   CellStyle="{StaticResource CellStyleHorizontalCenter}"/>

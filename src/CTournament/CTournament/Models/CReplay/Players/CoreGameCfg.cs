@@ -11,7 +11,8 @@ namespace CTournament.Models.CReplay.Players
         public GameData GameData { get; set; }
         public static void FillObject(CoreGameCfg coreGameCfg)
         {
-            ClientCard.FillObject(coreGameCfg.ClientCard);
+            if (coreGameCfg != null)
+                ClientCard.FillObject(coreGameCfg.ClientCard);
         }
 
     }

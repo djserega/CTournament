@@ -147,8 +147,8 @@ namespace CTournament.Readers
 
         private bool ContainsStartParameter(string source, string text)
         {
-            return source.Length > 40
-                && source.Substring(0, 40).Contains(text);
+            return source.Length > 100
+                && source.Substring(0, 100).Contains(text);
         }
 
         private void SetPlayersGameModeFromResultInfo()

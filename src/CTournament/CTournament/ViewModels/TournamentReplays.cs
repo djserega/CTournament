@@ -83,22 +83,22 @@ namespace CTournament.ViewModels
             saveToExcel.SaveList(tournamentReplays);
         });
 
-         public ICommand SaveReplaysToExcelIsCurrentUserCommand => new DelegateCommand(() =>
-        {
-            if (Replays == null)
-                return;
+        public ICommand SaveReplaysToExcelIsCurrentUserCommand => new DelegateCommand(() =>
+       {
+           if (Replays == null)
+               return;
 
-            List<Models.TournamentReplay> tournamentReplays = Replays.Cast<Models.TournamentReplay>().ToList();
+           List<Models.TournamentReplay> tournamentReplays = Replays.Cast<Models.TournamentReplay>().ToList();
 
-            SaveToExcel.Saving saveToExcel = new SaveToExcel.Saving()
-            {
-                FileName = _currentTournametDirectory.Name,
-                IsCurrentUser = true
-            };
-            saveToExcel.SaveList(tournamentReplays);
-        });
+           SaveToExcel.Saving saveToExcel = new SaveToExcel.Saving()
+           {
+               FileName = _currentTournametDirectory.Name,
+               IsCurrentUser = true
+           };
+           saveToExcel.SaveList(tournamentReplays);
+       });
 
-       public ICommand RefreshListReplaysCommand => new DelegateCommand(async () => { await UpdateListReplaysAsync(); });
+        public ICommand RefreshListReplaysCommand => new DelegateCommand(async () => { await UpdateListReplaysAsync(); });
 
         private async Task UpdateListReplaysAsync()
         {
@@ -187,8 +187,9 @@ namespace CTournament.ViewModels
         {
             foreach (Models.CReplay.Players.PlayersInfo player in players)
             {
-                if (player.CoreGameCfg.ClientCard.Visual?.Contains("PL_RUS_Recruit_", StringComparison.OrdinalIgnoreCase) ?? false)
-                    return true;
+                if (player.CoreGameCfg != null)
+                    if (player.CoreGameCfg.ClientCard.Visual?.Contains("PL_RUS_Recruit_", StringComparison.OrdinalIgnoreCase) ?? false)
+                        return true;
             }
 
             return false;

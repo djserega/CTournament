@@ -120,6 +120,9 @@ namespace CTournament.Statistics
 
         internal void AddData(Models.CReplay.Players.PlayersInfo playersInfo)
         {
+            if (playersInfo.CoreGameCfg == null)
+                return;
+
             #region PlayerKills
 
             AddDataToDictionary(_dictPlayerKillsUser, playersInfo.NickName, playersInfo.PlayersDataInfo.PlayerKills);

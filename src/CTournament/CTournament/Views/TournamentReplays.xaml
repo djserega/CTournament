@@ -41,6 +41,7 @@
                   RowDetailsVisibilityMode="{Binding VisibilityDetailedInfoReplay}"
                   Background="{x:Null}">
             <DataGrid.Columns>
+                <DataGridTextColumn     Header="Дата игры"      Binding="{Binding Date, StringFormat=\{0:dd.MM.yyyy HH:mm:ss\}}"/>
                 <DataGridTextColumn     Header="Режим"          Binding="{Binding GameMode}"/>
                 <DataGridTextColumn     Header="Капитан"        Binding="{Binding Capitan}"         />
                 <DataGridCheckBoxColumn Header="Есть рекруты"   Binding="{Binding IsRecruit}"/>

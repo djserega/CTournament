@@ -10,7 +10,8 @@ namespace CTournament.Readers
         private static readonly object _lock = new object();
 
         private const string _keyStartGameModeInfo = "{\"GameMode\":";
-        private const string _textEndGameMode = "\"ReplayPath\":null}";
+        //private const string _textEndGameMode = "\"ReplayPath\":null}";
+        private const string _textEndGameMode = "\"ReplayPath\":";
         private const string _keyStartResultInfo = "{\"PlayersData\":";
 
         internal bool InvokeUpdaterData { get; set; } = true;
@@ -117,6 +118,7 @@ namespace CTournament.Readers
             int endPartGameMode = endGameMode + _textEndGameMode.Length - startPartGameMode;
 
             string textGameMode = lineLog.Substring(startPartGameMode, endPartGameMode);
+            textGameMode += "\"\"}";
 
             GameModeInfo = JsonConvert.DeserializeObject<Models.CReplay.GameModeInfo>(textGameMode);
 

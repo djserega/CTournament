@@ -9,9 +9,10 @@ namespace CTournament.Readers
     {
         private static readonly object _lock = new object();
 
-        private const string _keyStartGameModeInfo = "{\"GameMode\":";
+        private const string _keyStartGameModeInfo = "{\"game_mode\":";
         //private const string _textEndGameMode = "\"ReplayPath\":null}";
-        private const string _textEndGameMode = "\"ReplayPath\":";
+        //private const string _textEndGameMode = "\"ReplayPath\":";
+        private const string _textEndGameMode = "}}}]}";
         private const string _keyStartResultInfo = "{\"PlayersData\":";
 
         internal bool InvokeUpdaterData { get; set; } = true;
@@ -118,7 +119,7 @@ namespace CTournament.Readers
             int endPartGameMode = endGameMode + _textEndGameMode.Length - startPartGameMode;
 
             string textGameMode = lineLog.Substring(startPartGameMode, endPartGameMode);
-            textGameMode += "\"\"}";
+            //textGameMode += "\"\"}";
 
             GameModeInfo = JsonConvert.DeserializeObject<Models.CReplay.GameModeInfo>(textGameMode);
 
@@ -131,7 +132,7 @@ namespace CTournament.Readers
         {
             int startPartPlayersData = lineLog.IndexOf(_keyStartResultInfo, endPartGameMode);
 
-            if (startPartPlayersData > 0)
+            if (startPartPlayersData >= 0)
             {
                 string partPlayersData = lineLog.Substring(startPartPlayersData);
                 int positionStartMatchId = partPlayersData.IndexOf("MatchId");

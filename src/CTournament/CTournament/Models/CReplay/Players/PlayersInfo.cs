@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace CTournament.Models.CReplay.Players
         public int TeamId { get; set; }
         public int RankedSeasonPoints { get; set; }
         public int RrankedSeasonNumBattles { get; set; }
+        [JsonProperty("player_human_data")]
         public CoreGameCfg CoreGameCfg { get; set; }
 
         [NotMapped]

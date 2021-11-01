@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
@@ -7,6 +8,7 @@ namespace CTournament.Models.CReplay
 {
     public class GameModeInfo
     {
+        [JsonProperty("game_mode")]
         public string GameMode { get; set; }
         public string Date { get; set; }
         public double ReplayStartSeconds { get; set; }

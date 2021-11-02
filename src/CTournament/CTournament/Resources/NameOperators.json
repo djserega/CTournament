@@ -176,5 +176,45 @@
   "PL_ISR_NESHER2015_A_ES1": "Афела",
   "PL_ISR_NESHER2015_G_ES1": "Хагана",
   "PL_ISR_NESHER2015_M_ES1": "Шаршерет",
-  "PL_ISR_NESHER2015_S_ES1": "Эйма"
+  "PL_ISR_NESHER2015_S_ES1": "Эйма",
+
+  "PL_ESP_EZAPAC_A": "Фаро",
+  "PL_ESP_EZAPAC_G": "Матадор",
+  "PL_ESP_EZAPAC_M": "Мигель",
+  "PL_ESP_EZAPAC_S": "Диабло",
+
+  "PL_ESP_EZAPAC_A_LS": "Фаро",
+  "PL_ESP_EZAPAC_G_LS": "Матадор",
+  "PL_ESP_EZAPAC_M_LS": "Мигель",
+  "PL_ESP_EZAPAC_S_LS": "Диабло",
+
+  "PL_ESP_EZAPAC_A_ES": "Фаро",
+  "PL_ESP_EZAPAC_G_ES": "Матадор",
+  "PL_ESP_EZAPAC_M_ES": "Мигель",
+  "PL_ESP_EZAPAC_S_ES": "Диабло",
+
+  "PL_ESP_EZAPAC_A_ES1": "Фаро",
+  "PL_ESP_EZAPAC_G_ES1": "Матадор",
+  "PL_ESP_EZAPAC_M_ES1": "Мигель",
+  "PL_ESP_EZAPAC_S_ES1": "Диабло",
+
+  "PL_KAZ_ARYSTAN_A": "Мустанг",
+  "PL_KAZ_ARYSTAN_G": "Тибет",
+  "PL_KAZ_ARYSTAN_M": "Багги",
+  "PL_KAZ_ARYSTAN_S": "Султан",
+
+  "PL_KAZ_ARYSTAN_A_LS": "Мустанг",
+  "PL_KAZ_ARYSTAN_G_LS": "Тибет",
+  "PL_KAZ_ARYSTAN_M_LS": "Багги",
+  "PL_KAZ_ARYSTAN_S_LS": "Султан",
+
+  "PL_KAZ_ARYSTAN_A_ES": "Мустанг",
+  "PL_KAZ_ARYSTAN_G_ES": "Тибет",
+  "PL_KAZ_ARYSTAN_M_ES": "Багги",
+  "PL_KAZ_ARYSTAN_S_ES": "Султан",
+
+  "PL_KAZ_ARYSTAN_A_ES1": "Мустанг",
+  "PL_KAZ_ARYSTAN_G_ES1": "Тибет",
+  "PL_KAZ_ARYSTAN_M_ES1": "Багги",
+  "PL_KAZ_ARYSTAN_S_ES1": "Султан"
 }

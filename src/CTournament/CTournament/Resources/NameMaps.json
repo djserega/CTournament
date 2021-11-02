@@ -24,5 +24,10 @@
   "lv_karhad_emirresidence_default": "Резиденция эмира",
   "lv_karhad_emirresidence_evening": "Резиденция эмира: Вечер",
 
-  "lv_karhad_hotel_default": "Отель Альмалик"
+  "lv_karhad_hotel_default": "Отель Альмалик",
+
+  "lv_zalessye_dam_default": "Дамба",
+
+  "lv_zalessye_passage_default": "Переправа",
+  "lv_zalessye_passage_overcast": "Переправа: Вечер"
 }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 
@@ -10,6 +11,7 @@ namespace CTournament
     internal static class DictionaryTemplates
     {
         private static readonly string _nameElemetnByDefault = "<not-found>";
+        private static readonly string[] _postfixNamesOperators = { "_LS", "_ES", "_ES1" };
 
         private static Dictionary<string, string> _dictNameMap;
         private static Dictionary<string, string> _dictNameMission;
@@ -70,7 +72,23 @@ namespace CTournament
 
         private static void FillDictTypesMission() => _dictTypesMission = DeserializeJsonString(GetJsonTextResource("TypesMission.json"));
 
-        private static void FillDictNameOperators() => _dictNameOperators = DeserializeJsonString(GetJsonTextResource("NameOperators.json"));
+        private static void FillDictNameOperators()
+        {
+            _dictNameOperators = DeserializeJsonString(GetJsonTextResource("NameOperators.json"));
+
+            List<string> operatorKeys = _dictNameOperators.Keys.ToList();
+            foreach (string key in operatorKeys)
+            {
+                foreach (string itemPostfix in _postfixNamesOperators)
+                {
+                    string keyAndPostfix = $"{key}{itemPostfix}";
+                    if (!_dictNameOperators.ContainsKey(keyAndPostfix))
+                    {
+                        _dictNameOperators.Add(keyAndPostfix, _dictNameOperators[key]);
+                    }
+                }
+            }
+        }
 
         #endregion
 

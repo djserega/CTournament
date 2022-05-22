@@ -13,6 +13,7 @@ namespace CTournament.Readers
         //private const string _textEndGameMode = "\"ReplayPath\":null}";
         //private const string _textEndGameMode = "\"ReplayPath\":";
         private const string _textEndGameMode = "}}}]}";
+        private const string _textPositionReplayDuration = "replay_duration";
         private const string _keyStartResultInfo = "{\"PlayersData\":";
 
         internal bool InvokeUpdaterData { get; set; } = true;
@@ -58,9 +59,12 @@ namespace CTournament.Readers
                                     {
                                         int endPartGameMode = ParseGameMode(lineLog);
 
-                                        ParseModelResult(lineLog, endPartGameMode);
+                                        if (endPartGameMode != default)
+                                        {
+                                            ParseModelResult(lineLog, endPartGameMode);
 
-                                        result = true;
+                                            result = true;
+                                        }
                                     }
                                     else if (ContainsStartParameter(lineLog, _keyStartResultInfo))
                                     {
@@ -115,11 +119,15 @@ namespace CTournament.Readers
         {
             int startPartGameMode = lineLog.IndexOf(_keyStartGameModeInfo);
 
-            int endGameMode = lineLog.IndexOf(_textEndGameMode);
+            int endReplayDuration = lineLog.IndexOf(_textPositionReplayDuration);
+            if (endReplayDuration < 0)
+                return default;
+
+            int endGameMode = lineLog.IndexOf("}", endReplayDuration);
+
             int endPartGameMode = endGameMode + _textEndGameMode.Length - startPartGameMode;
 
-            string textGameMode = lineLog.Substring(startPartGameMode, endPartGameMode);
-            //textGameMode += "\"\"}";
+            string textGameMode = lineLog.Substring(startPartGameMode, endPartGameMode - 4);
 
             GameModeInfo = JsonConvert.DeserializeObject<Models.CReplay.GameModeInfo>(textGameMode);
 
@@ -158,7 +166,8 @@ namespace CTournament.Readers
         {
             foreach (Models.CReplay.Players.PlayersDataInfo itemDataInfo in ResultInfo.PlayersData)
             {
-                GameModeInfo.Players.Find(f => f.NickName == itemDataInfo.Nickname).PlayersDataInfo = itemDataInfo;
+                if (GameModeInfo != null)
+                    GameModeInfo.Players.Find(f => f.NickName == itemDataInfo.Nickname).PlayersDataInfo = itemDataInfo;
             }
         }
     }

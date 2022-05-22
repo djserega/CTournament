@@ -111,7 +111,7 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
                     Margin="5 10 5 4"
-                    Background="{StaticResource SecondaryAccentBrush}"
+                    
                     BorderThickness="0"
                     Content="{md:PackIcon Kind=Update}"
                     ToolTip="Обновить текущий каталог"
@@ -120,7 +120,7 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
                     Margin="5"
-                    Background="{StaticResource SecondaryAccentBrush}"
+                    
                     BorderThickness="0"
                     Content="{md:PackIcon Kind=MicrosoftExcel}"
                     ToolTip="Сохранить расчет в каталог"
@@ -129,7 +129,7 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
                     Margin="5"
-                    Background="{StaticResource SecondaryAccentBrush}"
+                    
                     BorderThickness="0"
                     Content="{md:PackIcon Kind=MicrosoftExcel}"
                     ToolTip="Сохранить расчет в каталог (персональный зачет авторов)"

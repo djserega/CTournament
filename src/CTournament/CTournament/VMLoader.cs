@@ -5,36 +5,41 @@ using System.Text;
 
 namespace CTournament
 {
+    public interface ITransient { }
+    public interface ISingleton { }
+
     public class VMLoader
     {
-        private static ServiceProvider _serviceProvider;
+        private static IServiceProvider _serviceProvider;
 
         public static void Init()
         {
             var services = new ServiceCollection();
 
-            services.AddSingleton<ViewModels.MainWindow>();
-            services.AddSingleton<ViewModels.TournamentDirectory>();
-            services.AddSingleton<ViewModels.TournamentReplays>();
-            services.AddSingleton<ViewModels.UserStatistics>();
-            services.AddSingleton<ViewModels.RateSettings>();
-            services.AddSingleton<ViewModels.CrashApp>();
-
-            services.AddTransient<ViewModels.UserStatisticsItem>();
+            services.Scan(el =>
+                el.FromAssemblyOf<ISingleton>()
+                    .AddClasses(cl => cl.AssignableTo<ISingleton>()).AsSelf().WithSingletonLifetime()
+                );
+            services.Scan(el =>
+                 el.FromAssemblyOf<ITransient>()
+                     .AddClasses(cl => cl.AssignableTo<ITransient>()).AsSelf().WithTransientLifetime()
+                 );
 
             _serviceProvider = services.BuildServiceProvider();
 
-            foreach (var itemService in services)
+            foreach (ServiceDescriptor itemService in services)
                 _serviceProvider.GetRequiredService(itemService.ServiceType);
         }
 
-        public ViewModels.MainWindow MainWindow => _serviceProvider.GetRequiredService<ViewModels.MainWindow>();
-        public ViewModels.TournamentDirectory TournamentDirectory => _serviceProvider.GetRequiredService<ViewModels.TournamentDirectory>();
-        public ViewModels.TournamentReplays TournamentReplays => _serviceProvider.GetRequiredService<ViewModels.TournamentReplays>();
-        public ViewModels.UserStatistics UserStatistics => _serviceProvider.GetRequiredService<ViewModels.UserStatistics>();
-        public ViewModels.RateSettings RateSettings => _serviceProvider.GetRequiredService<ViewModels.RateSettings>();
-        public ViewModels.CrashApp CrashApp => _serviceProvider.GetRequiredService<ViewModels.CrashApp>();
+        public static T? Resolve<T>() => _serviceProvider.GetService<T>();
 
-        public ViewModels.UserStatisticsItem UserStatisticsItem => _serviceProvider.GetRequiredService<ViewModels.UserStatisticsItem>();
+        public ViewModels.MainWindow? MainWindow => Resolve<ViewModels.MainWindow>();
+        public ViewModels.TournamentDirectory? TournamentDirectory => Resolve<ViewModels.TournamentDirectory>();
+        public ViewModels.TournamentReplays? TournamentReplays => Resolve<ViewModels.TournamentReplays>();
+        public ViewModels.UserStatistics? UserStatistics => Resolve<ViewModels.UserStatistics>();
+        public ViewModels.RateSettings? RateSettings => Resolve<ViewModels.RateSettings>();
+        public ViewModels.CrashApp? CrashApp => Resolve<ViewModels.CrashApp>();
+
+        public ViewModels.UserStatisticsItem? UserStatisticsItem => Resolve<ViewModels.UserStatisticsItem>();
     }
 }

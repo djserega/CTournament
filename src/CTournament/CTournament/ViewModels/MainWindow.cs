@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace CTournament.ViewModels
 {
-    public class MainWindow : BindableBase
+    public class MainWindow : BindableBase, ISingleton
     {
         public MainWindow()
         {

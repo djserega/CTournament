@@ -9,7 +9,7 @@ using System.Windows.Input;
 
 namespace CTournament.ViewModels
 {
-    public class RateSettings : BindableBase, Models.ISavedRateSettings
+    public class RateSettings : BindableBase, Models.ISavedRateSettings, ISingleton
     {
         private static RateSettings _rateSettings;
 

@@ -12,7 +12,7 @@ using System.Windows.Input;
 
 namespace CTournament.ViewModels
 {
-    public class TournamentDirectory : BindableBase
+    public class TournamentDirectory : BindableBase, ITransient
     {
         public static event EventHandler<Models.TournamentsDirectory> ChangeSelectedItemTournamentsDirectoryEvents;
 

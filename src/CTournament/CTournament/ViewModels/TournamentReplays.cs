@@ -15,7 +15,7 @@ using System.Windows.Input;
 
 namespace CTournament.ViewModels
 {
-    public class TournamentReplays : BindableBase
+    public class TournamentReplays : BindableBase, ITransient
     {
         private readonly object _lock = new object();
 

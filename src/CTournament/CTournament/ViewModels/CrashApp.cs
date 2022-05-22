@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace CTournament.ViewModels
 {
-    public class CrashApp : BindableBase
+    public class CrashApp : BindableBase, ISingleton
     {
         public CrashApp()
         {

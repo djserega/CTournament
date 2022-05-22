@@ -10,7 +10,7 @@ using System.Windows.Input;
 
 namespace CTournament.ViewModels
 {
-    public class UserStatistics : BindableBase
+    public class UserStatistics : BindableBase, ISingleton
     {
         public static event EventHandler<List<Models.ItemUserStatisticsItemUpdater>> CalculationStatistics;
 

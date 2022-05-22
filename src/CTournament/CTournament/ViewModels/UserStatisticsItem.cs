@@ -6,7 +6,7 @@ using System.Windows;
 
 namespace CTournament.ViewModels
 {
-    public class UserStatisticsItem : BindableBase
+    public class UserStatisticsItem : BindableBase, ITransient
     {
         private int _id = new Random().Next(0, 10241024);
         public UserStatisticsItem()

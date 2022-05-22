@@ -10,6 +10,7 @@ namespace CTournament.Models.CReplay
     {
         [JsonProperty("game_mode")]
         public string GameMode { get; set; }
+        [JsonProperty("replay_create_time")]
         public string Date { get; set; }
         public double ReplayStartSeconds { get; set; }
         public string MatchId { get; set; }

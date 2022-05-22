@@ -7,5 +7,6 @@ namespace CTournament.Models.CReplay
     public class ConsumablesInfo
     {
         public int ConsumableOne { get; set; }
+        public int ConsumableTwo { get; set; }
     }
 }

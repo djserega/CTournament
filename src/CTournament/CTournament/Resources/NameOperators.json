@@ -1,220 +1,77 @@
 {
-  "PL_DEU_KSK2011_A": "Рейн",
-  "PL_DEU_KSK2011_G": "Штерн",
-  "PL_DEU_KSK2011_M": "Шатц",
-  "PL_DEU_KSK2011_S": "Курт",
-
-  "PL_DEU_KSK2011_A_LS": "Рейн",
-  "PL_DEU_KSK2011_G_LS": "Штерн",
-  "PL_DEU_KSK2011_M_LS": "Шатц",
-  "PL_DEU_KSK2011_S_LS": "Курт",
-
-  "PL_DEU_KSK2011_A_ES": "Рейн",
-  "PL_DEU_KSK2011_G_ES": "Штерн",
-  "PL_DEU_KSK2011_M_ES": "Шатц",
-  "PL_DEU_KSK2011_S_ES": "Курт",
-
-
-  "PL_GBR_TFB2008_A": "Стерлинг",
-  "PL_GBR_TFB2008_G": "Бишоп",
-  "PL_GBR_TFB2008_M": "Ватсон",
-  "PL_GBR_TFB2008_S": "Арчер",
-
-  "PL_GBR_TFB2008_A_LS": "Стерлинг",
-  "PL_GBR_TFB2008_G_LS": "Бишоп",
-  "PL_GBR_TFB2008_M_LS": "Ватсон",
-  "PL_GBR_TFB2008_S_LS": "Арчер",
-
-  "PL_GBR_TFB2008_A_ES": "Стерлинг",
-  "PL_GBR_TFB2008_G_ES": "Бишоп",
-  "PL_GBR_TFB2008_M_ES": "Ватсон",
-  "PL_GBR_TFB2008_S_ES": "Арчер",
-
-
-  "PL_RUS_22SPN2016_A": "Плут",
-  "PL_RUS_22SPN2016_G": "Кит",
-  "PL_RUS_22SPN2016_M": "Каравай",
-  "PL_RUS_22SPN2016_S": "Тень",
-
-  "PL_RUS_22SPN2016_A_LS": "Плут",
-  "PL_RUS_22SPN2016_G_LS": "Кит",
-  "PL_RUS_22SPN2016_M_LS": "Каравай",
-  "PL_RUS_22SPN2016_S_LS": "Тень",
-
-  "PL_RUS_22SPN2016_A_ES": "Плут",
-  "PL_RUS_22SPN2016_G_ES": "Кит",
-  "PL_RUS_22SPN2016_M_ES": "Каравай",
-  "PL_RUS_22SPN2016_S_ES": "Тень",
-
+  "PL_RUS_Recruit_A": "Рекрут Штурмовик",
+  "PL_RUS_Recruit_G": "Рекрут Поддержка",
+  "PL_RUS_Recruit_M": "Рекрут Медик",
+  "PL_RUS_Recruit_S": "Рекрут Снайпер",
 
   "PL_RUS_FSB2004_A": "Волк",
   "PL_RUS_FSB2004_G": "Алмаз",
   "PL_RUS_FSB2004_M": "Дед",
   "PL_RUS_FSB2004_S": "Стрелок",
 
-  "PL_RUS_FSB2004_A_LS": "Волк",
-  "PL_RUS_FSB2004_G_LS": "Алмаз",
-  "PL_RUS_FSB2004_M_LS": "Дед",
-  "PL_RUS_FSB2004_S_LS": "Стрелок",
-
-  "PL_RUS_FSB2004_A_ES": "Волк",
-  "PL_RUS_FSB2004_G_ES": "Алмаз",
-  "PL_RUS_FSB2004_M_ES": "Дед",
-  "PL_RUS_FSB2004_S_ES": "Стрелок",
-
-  "PL_RUS_FSB2004_A_ES1": "Волк",
-  "PL_RUS_FSB2004_G_ES1": "Алмаз",
-  "PL_RUS_FSB2004_M_ES1": "Дед",
-  "PL_RUS_FSB2004_S_ES1": "Стрелок",
-
-
-  "PL_FRA_RAID2017_A": "Авангард",
-  "PL_FRA_RAID2017_G": "Бастион",
-  "PL_FRA_RAID2017_M": "Велюр",
-  "PL_FRA_RAID2017_S": "Вагабонд",
-
-  "PL_FRA_RAID2017_A_LS": "Авангард",
-  "PL_FRA_RAID2017_G_LS": "Бастион",
-  "PL_FRA_RAID2017_M_LS": "Велюр",
-  "PL_FRA_RAID2017_S_LS": "Вагабонд",
-
-  "PL_FRA_RAID2017_A_ES": "Авангард",
-  "PL_FRA_RAID2017_G_ES": "Бастион",
-  "PL_FRA_RAID2017_M_ES": "Велюр",
-  "PL_FRA_RAID2017_S_ES": "Вагабонд",
-
-
   "PL_RUS_FSB2016_A": "Перун",
   "PL_RUS_FSB2016_G": "Сварог",
   "PL_RUS_FSB2016_M": "Травник",
   "PL_RUS_FSB2016_S": "Сокол",
-
-  "PL_RUS_FSB2016_A_LS": "Перун",
-  "PL_RUS_FSB2016_G_LS": "Сварог",
-  "PL_RUS_FSB2016_M_LS": "Травник",
-  "PL_RUS_FSB2016_S_LS": "Сокол",
-
-  "PL_RUS_FSB2016_A_ES": "Перун",
-  "PL_RUS_FSB2016_G_ES": "Сварог",
-  "PL_RUS_FSB2016_M_ES": "Травник",
-  "PL_RUS_FSB2016_S_ES": "Сокол",
-
-
-  "PL_RUS_Recruit_A": "Рекрут Штурмовик",
-  "PL_RUS_Recruit_G": "Рекрут Поддержка",
-  "PL_RUS_Recruit_M": "Рекрут Медик",
-  "PL_RUS_Recruit_S": "Рекрут Снайпер",
-
 
   "PL_RUS_SSO2013_A": "Ворон",
   "PL_RUS_SSO2013_G": "Спутник",
   "PL_RUS_SSO2013_M": "Бард",
   "PL_RUS_SSO2013_S": "Комар",
 
-  "PL_RUS_SSO2013_A_LS": "Ворон",
-  "PL_RUS_SSO2013_G_LS": "Спутник",
-  "PL_RUS_SSO2013_M_LS": "Бард",
-  "PL_RUS_SSO2013_S_LS": "Комар",
-
-  "PL_RUS_SSO2013_A_ES": "Ворон",
-  "PL_RUS_SSO2013_G_ES": "Спутник",
-  "PL_RUS_SSO2013_M_ES": "Бард",
-  "PL_RUS_SSO2013_S_ES": "Комар",
-
+  "PL_RUS_22SPN2016_A": "Плут",
+  "PL_RUS_22SPN2016_G": "Кит",
+  "PL_RUS_22SPN2016_M": "Каравай",
+  "PL_RUS_22SPN2016_S": "Тень",
 
   "PL_POL_GROM2014_A": "Кошмар",
   "PL_POL_GROM2014_G": "Пророк",
   "PL_POL_GROM2014_M": "Микола",
   "PL_POL_GROM2014_S": "Стилет",
 
-  "PL_POL_GROM2014_A_LS": "Кошмар",
-  "PL_POL_GROM2014_G_LS": "Пророк",
-  "PL_POL_GROM2014_M_LS": "Микола",
-  "PL_POL_GROM2014_S_LS": "Стилет",
-
-  "PL_POL_GROM2014_A_ES": "Кошмар",
-  "PL_POL_GROM2014_G_ES": "Пророк",
-  "PL_POL_GROM2014_M_ES": "Микола",
-  "PL_POL_GROM2014_S_ES": "Стилет",
-
+  "PL_DEU_KSK2011_A": "Рейн",
+  "PL_DEU_KSK2011_G": "Штерн",
+  "PL_DEU_KSK2011_M": "Шатц",
+  "PL_DEU_KSK2011_S": "Курт",
 
   "PL_USA_Seal2014_A": "Корсар",
   "PL_USA_Seal2014_G": "Бурбон",
   "PL_USA_Seal2014_M": "Монк",
   "PL_USA_Seal2014_S": "Скаут",
 
-  "PL_USA_Seal2014_A_LS": "Корсар",
-  "PL_USA_Seal2014_G_LS": "Бурбон",
-  "PL_USA_Seal2014_M_LS": "Монк",
-  "PL_USA_Seal2014_S_LS": "Скаут",
+  "PL_GBR_TFB2008_A": "Стерлинг",
+  "PL_GBR_TFB2008_G": "Бишоп",
+  "PL_GBR_TFB2008_M": "Ватсон",
+  "PL_GBR_TFB2008_S": "Арчер",
 
-  "PL_USA_Seal2014_A_ES": "Корсар",
-  "PL_USA_Seal2014_G_ES": "Бурбон",
-  "PL_USA_Seal2014_M_ES": "Монк",
-  "PL_USA_Seal2014_S_ES": "Скаут",
-
-  "PL_USA_Seal2014_A_ES1": "Корсар",
-  "PL_USA_Seal2014_G_ES1": "Бурбон",
-  "PL_USA_Seal2014_M_ES1": "Монк",
-  "PL_USA_Seal2014_S_ES1": "Скаут",
+  "PL_FRA_RAID2017_A": "Авангард",
+  "PL_FRA_RAID2017_G": "Бастион",
+  "PL_FRA_RAID2017_M": "Велюр",
+  "PL_FRA_RAID2017_S": "Вагабонд",
 
   "PL_ISR_NESHER2015_A": "Афела",
   "PL_ISR_NESHER2015_G": "Хагана",
   "PL_ISR_NESHER2015_M": "Шаршерет",
   "PL_ISR_NESHER2015_S": "Эйма",
 
-  "PL_ISR_NESHER2015_A_LS": "Афела",
-  "PL_ISR_NESHER2015_G_LS": "Хагана",
-  "PL_ISR_NESHER2015_M_LS": "Шаршерет",
-  "PL_ISR_NESHER2015_S_LS": "Эйма",
-
-  "PL_ISR_NESHER2015_A_ES": "Афела",
-  "PL_ISR_NESHER2015_G_ES": "Хагана",
-  "PL_ISR_NESHER2015_M_ES": "Шаршерет",
-  "PL_ISR_NESHER2015_S_ES": "Эйма",
-
-  "PL_ISR_NESHER2015_A_ES1": "Афела",
-  "PL_ISR_NESHER2015_G_ES1": "Хагана",
-  "PL_ISR_NESHER2015_M_ES1": "Шаршерет",
-  "PL_ISR_NESHER2015_S_ES1": "Эйма",
-
   "PL_ESP_EZAPAC_A": "Фаро",
   "PL_ESP_EZAPAC_G": "Матадор",
   "PL_ESP_EZAPAC_M": "Мигель",
   "PL_ESP_EZAPAC_S": "Диабло",
-
-  "PL_ESP_EZAPAC_A_LS": "Фаро",
-  "PL_ESP_EZAPAC_G_LS": "Матадор",
-  "PL_ESP_EZAPAC_M_LS": "Мигель",
-  "PL_ESP_EZAPAC_S_LS": "Диабло",
-
-  "PL_ESP_EZAPAC_A_ES": "Фаро",
-  "PL_ESP_EZAPAC_G_ES": "Матадор",
-  "PL_ESP_EZAPAC_M_ES": "Мигель",
-  "PL_ESP_EZAPAC_S_ES": "Диабло",
-
-  "PL_ESP_EZAPAC_A_ES1": "Фаро",
-  "PL_ESP_EZAPAC_G_ES1": "Матадор",
-  "PL_ESP_EZAPAC_M_ES1": "Мигель",
-  "PL_ESP_EZAPAC_S_ES1": "Диабло",
 
   "PL_KAZ_ARYSTAN_A": "Мустанг",
   "PL_KAZ_ARYSTAN_G": "Тибет",
   "PL_KAZ_ARYSTAN_M": "Багги",
   "PL_KAZ_ARYSTAN_S": "Султан",
 
-  "PL_KAZ_ARYSTAN_A_LS": "Мустанг",
-  "PL_KAZ_ARYSTAN_G_LS": "Тибет",
-  "PL_KAZ_ARYSTAN_M_LS": "Багги",
-  "PL_KAZ_ARYSTAN_S_LS": "Султан",
+  "PL_BLR_SSO_A": "Лазутчик",
+  "PL_BLR_SSO_G": "Зубр",
+  "PL_BLR_SSO_M": "Каваль",
+  "PL_BLR_SSO_S": "Бусел",
 
-  "PL_KAZ_ARYSTAN_A_ES": "Мустанг",
-  "PL_KAZ_ARYSTAN_G_ES": "Тибет",
-  "PL_KAZ_ARYSTAN_M_ES": "Багги",
-  "PL_KAZ_ARYSTAN_S_ES": "Султан",
+  "PL_SWE_AMF_A": "Старкад",
+  "PL_SWE_AMF_G": "Один",
+  "PL_SWE_AMF_M": "Фрейр",
+  "PL_SWE_AMF_S": "Видар"
 
-  "PL_KAZ_ARYSTAN_A_ES1": "Мустанг",
-  "PL_KAZ_ARYSTAN_G_ES1": "Тибет",
-  "PL_KAZ_ARYSTAN_M_ES1": "Багги",
-  "PL_KAZ_ARYSTAN_S_ES1": "Султан"
 }

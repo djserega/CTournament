@@ -1,4 +1,7 @@
 {
+  "lv_karhad_onboarding_pve": "Онбординг",
+  "lv_zalessye_onboarding_pve": "Онбординг",
+
   "lv_karhad_desertpolygon": "Полигон: Постоянная миссия",
   "lv_karhad_mall": "Торговый центр",
   "lv_karhad_palmroad": "Пальмовая дорога",
@@ -8,6 +11,12 @@
   "lv_karhad_village": "Деревня",
   "lv_karhad_emirresidence": "Резиденция эмира",
   "lv_karhad_hotel": "Отель Альмалик",
+  "lv_zalessye_submarine": "Объект 903",
+  "lv_zalessye_dam": "Дамба",
+  "lv_zalessye_passage": "Переправа",
+  "lv_zalessye_depot": "Депо",
+  "lv_zalessye_forest": "Лес",
+
 
   "lv_karhad_desertpolygon_pve": "Полигон: Постоянная миссия",
   "lv_karhad_mall_pve": "Торговый центр",
@@ -18,6 +27,12 @@
   "lv_karhad_village_pve": "Деревня",
   "lv_karhad_emirresidence_pve": "Резиденция эмира",
   "lv_karhad_hotel_pve": "Отель Альмалик",
+  "lv_zalessye_submarine_pve": "Объект 903",
+  "lv_zalessye_dam_pve": "Дамба",
+  "lv_zalessye_passage_pve": "Переправа",
+  "lv_zalessye_depot_pve": "Депо",
+  "lv_zalessye_forest_pve": "Лес",
+
 
   "lv_karhad_desertpolygon_pvp": "Полигон: Постоянная миссия",
   "lv_karhad_mall_pvp": "Торговый центр",
@@ -28,8 +43,12 @@
   "lv_karhad_village_pvp": "Деревня",
   "lv_karhad_emirresidence_pvp": "Резиденция эмира",
   "lv_karhad_hotel_pvp": "Отель Альмалик",
+  "lv_zalessye_submarine_pvp": "Объект 903",
   "lv_zalessye_dam_pvp": "Дамба",
   "lv_zalessye_passage_pvp": "Переправа",
+  "lv_zalessye_depot_pvp": "Депо",
+  "lv_zalessye_forest_pvp": "Лес",
+
 
   "lv_karhad_desertpolygon_hacking": "Полигон: Постоянная миссия",
   "lv_karhad_mall_hacking": "Торговый центр",
@@ -40,6 +59,12 @@
   "lv_karhad_village_hacking": "Деревня",
   "lv_karhad_emirresidence_hacking": "Резиденция эмира",
   "lv_karhad_hotel_hacking": "Отель Альмалик",
+  "lv_zalessye_submarine_hacking": "Объект 903",
+  "lv_zalessye_dam_hacking": "Дамба",
+  "lv_zalessye_passage_hacking": "Переправа",
+  "lv_zalessye_depot_hacking": "Депо",
+  "lv_zalessye_forest_hacking": "Лес",
+
 
   "lv_karhad_desertpolygon_pvpranked": "Полигон: Постоянная миссия",
   "lv_karhad_mall_pvpranked": "Торговый центр",
@@ -50,6 +75,41 @@
   "lv_karhad_village_pvpranked": "Деревня",
   "lv_karhad_emirresidence_pvpranked": "Резиденция эмира",
   "lv_karhad_hotel_pvpranked": "Отель Альмалик",
+  "lv_zalessye_submarine_pvpranked": "Объект 903",
+  "lv_zalessye_dam_pvpranked": "Дамба",
+  "lv_zalessye_passage_pvpranked": "Переправа",
+  "lv_zalessye_depot_pvpranked": "Депо",
+  "lv_zalessye_forest_pvpranked": "Лес",
 
-  "lv_karhad_palmroad_pvpve": "Пальмовая дорога"
+
+  "lv_karhad_desertpolygon_pvpve": "Полигон: Постоянная миссия",
+  "lv_karhad_mall_pvpve": "Торговый центр",
+  "lv_karhad_palmroad_pvpve": "Пальмовая дорога",
+  "lv_karhad_hospital_pvpve": "Больница",
+  "lv_karhad_caravanserai_pvpve": "Караван Сарай",
+  "lv_karhad_hangar_pvpve": "Гавань 'Амаль'",
+  "lv_karhad_village_pvpve": "Деревня",
+  "lv_karhad_emirresidence_pvpve": "Резиденция эмира",
+  "lv_karhad_hotel_pvpve": "Отель Альмалик",
+  "lv_zalessye_submarine_pvpve": "Объект 903",
+  "lv_zalessye_dam_pvpve": "Дамба",
+  "lv_zalessye_passage_pvpve": "Переправа",
+  "lv_zalessye_depot_pvpve": "Депо",
+  "lv_zalessye_forest_pvpve": "Лес",
+
+
+  "lv_karhad_desertpolygon_onslaught": "Полигон: Постоянная миссия",
+  "lv_karhad_mall_onslaught": "Торговый центр",
+  "lv_karhad_palmroad_onslaught": "Пальмовая дорога",
+  "lv_karhad_hospital_onslaught": "Больница",
+  "lv_karhad_caravanserai_onslaught": "Караван Сарай",
+  "lv_karhad_hangar_onslaught": "Гавань 'Амаль'",
+  "lv_karhad_village_onslaught": "Деревня",
+  "lv_karhad_emirresidence_onslaught": "Резиденция эмира",
+  "lv_karhad_hotel_onslaught": "Отель Альмалик",
+  "lv_zalessye_submarine_onslaught": "Объект 903",
+  "lv_zalessye_dam_onslaught": "Дамба",
+  "lv_zalessye_passage_onslaught": "Переправа",
+  "lv_zalessye_depot_onslaught": "Депо",
+  "lv_zalessye_forest_onslaught": "Лес"
 }

@@ -1,8 +1,10 @@
 {
   "lv_karhad_desertpolygon_default": "Полигон: Постоянная миссия",
 
+  "lv_karhad_onboarding_default": "Онбординг",
+
   "lv_karhad_mall_default": "Торговый центр",
-  "lv_karhad_mall_storm": "Торговый центр: Шторм.",
+  "lv_karhad_mall_storm": "Торговый центр: Шторм",
 
   "lv_karhad_palmroad_default": "Пальмовая дорога",
   "lv_karhad_palmroad_dark": "Пальмовая дорога: Грозовая",
@@ -13,10 +15,10 @@
   "lv_karhad_hospital_dusk": "Больница: Сумерки",
 
   "lv_karhad_caravanserai_default": "Караван Сарай",
-  "lv_karhad_caravanserai_night": "Караван Сарай: Ночь.",
+  "lv_karhad_caravanserai_night": "Караван Сарай: Ночь",
 
   "lv_karhad_hangar_default": "Гавань 'Амаль'",
-  "lv_karhad_hangar_storm": "Гавань 'Амаль': Шторм.",
+  "lv_karhad_hangar_storm": "Гавань 'Амаль': Шторм",
 
   "lv_karhad_village_default": "Деревня",
   "lv_karhad_village_day": "Деревня: День",
@@ -24,10 +26,20 @@
   "lv_karhad_emirresidence_default": "Резиденция эмира",
   "lv_karhad_emirresidence_evening": "Резиденция эмира: Вечер",
 
-  "lv_karhad_hotel_default": "Отель Альмалик",
-
   "lv_zalessye_dam_default": "Дамба",
+  "lv_zalessye_dam_evening": "Дамба: Вечер",
 
-  "lv_zalessye_passage_default": "Переправа",
-  "lv_zalessye_passage_overcast": "Переправа: Вечер"
+  "lv_zalessye_submarine_default": "Объект 903",
+  "lv_zalessye_submarine_evening": "Объект 903: Грозовой",
+  "lv_zalessye_submarine_night": "Объект 903: Ночь",
+
+  "lv_karhad_hotel_default": "Отель Альмалик",
+  "lv_karhad_hotel_day": "Отель Альмалик: День",
+
+  "lv_zalessye_passage_default": "Деревня",
+
+  "lv_zalessye_depot_default": "Депо",
+
+  "lv_zalessye_forest_default": "Лес",
+  "lv_zalessye_forest_evening": "Лес: Вечер"
 }

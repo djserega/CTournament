@@ -11,7 +11,7 @@ namespace CTournament
     internal static class DictionaryTemplates
     {
         private static readonly string _nameElemetnByDefault = "<not-found>";
-        private static readonly string[] _postfixNamesOperators = { "_LS", "_ES", "_ES1" };
+        private static readonly string[] _postfixNamesOperators = { "_LS", "_LS1", "_ES", "_ES1" };
 
         private static Dictionary<string, string> _dictNameMap;
         private static Dictionary<string, string> _dictNameMission;

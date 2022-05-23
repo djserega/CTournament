@@ -32,7 +32,7 @@ namespace CTournament.Models
             double seconds = parameters.Seconds * rateSettings.Seconds;
 
 
-            //           ((F      - H   ) / N    - G     - (L       + M      ) / 100                     ) * 100
+            //           ((F      - H   ) / N    - G     - (L       + M      ) / 100                    ) * 100
             ResultFull = ((damage - heal) / time - death - (minutes + seconds) / rateSettings.RateMinSec) * rateSettings.CommonRate;
 
             Result = Math.Round(ResultFull);

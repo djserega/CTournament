@@ -33,7 +33,7 @@ namespace CTournament.SaveToExcel
 
             for (int i = 0; i < TournamentReplays.Count; i++)
             {
-                worksheet.Cell(i + 2, 1).Value = i.ToString();
+                worksheet.Cell(i + 2, 1).Value = (i + 1).ToString();
 
                 foreach (ColumnMainStatistics itemColumns in _columns)
                 {
@@ -50,6 +50,7 @@ namespace CTournament.SaveToExcel
             {
                 "Capitan" => replay.Capitan,
                 "Operator" => replay.Operator,
+                "PlayedRoundsCount" => replay.PlayedRoundsCount.ToString(),
                 "GameMode" => replay.GameMode,
                 "IsRecruit" => BoolToYesNo(replay.IsRecruit),
                 "MinLevel" => replay.MinLevelOperators.ToString(),
@@ -69,16 +70,16 @@ namespace CTournament.SaveToExcel
         private void InitColumns()
         {
             _columns = new ColumnMainStatistics[10];
-            _columns[0] = new ColumnMainStatistics(1, "GameMode", "Режим");
-            _columns[1] = new ColumnMainStatistics(2, "Capitan", "Капитан");
-            _columns[2] = new ColumnMainStatistics(3, "IsRecruit", "Рекруты");
-            _columns[3] = new ColumnMainStatistics(4, "MinLevel", "Минимальный уровень");
+            _columns[0] = new ColumnMainStatistics(1, "Result", "Результат");
+            _columns[1] = new ColumnMainStatistics(2, "GameMode", "Режим");
+            _columns[2] = new ColumnMainStatistics(3, "Capitan", "Капитан");
+            _columns[3] = new ColumnMainStatistics(4, "Operator", "Оперативник");
             _columns[4] = new ColumnMainStatistics(5, "Mission", "Миссия");
-            _columns[5] = new ColumnMainStatistics(6, "Data.Damage", "Урон");
-            _columns[6] = new ColumnMainStatistics(7, "Data.Heal", "Лечение");
-            _columns[7] = new ColumnMainStatistics(8, "Data.Death", "Погиб");
-            _columns[8] = new ColumnMainStatistics(9, "MatchTimeAsTime", "Время боя");
-            _columns[9] = new ColumnMainStatistics(10, "Result", "Результат");
+            _columns[5] = new ColumnMainStatistics(6, "PlayedRoundsCount", "Раундов");
+            _columns[6] = new ColumnMainStatistics(7, "Data.Damage", "Урон");
+            _columns[7] = new ColumnMainStatistics(8, "Data.Heal", "Лечение");
+            _columns[8] = new ColumnMainStatistics(9, "Data.Death", "Погиб");
+            _columns[9] = new ColumnMainStatistics(10, "MatchTimeAsTime", "Время боя");
         }
     }
 }

@@ -14,6 +14,7 @@ namespace CTournament.Models
         public DateTime MatchTime{ get; set; }
         public string MatchTimeAsTime { get; set; }
         public string Capitan { get; set; }
+        public string Operator { get; set; }
         public int MinLevelOperators { get; set; }
         public bool IsRecruit { get; set; }
         public string Mission { get; set; }

@@ -171,6 +171,7 @@ namespace CTournament.ViewModels
                             MatchTime = replayReader.ResultInfo.MatchTimeView,
                             MatchTimeAsTime = replayReader.ResultInfo.MatchTimeViewTime,
                             Capitan = replayReader.ResultInfo.PlayersData.FirstOrDefault(item => item.IsCurrentUser).Nickname,
+                            Operator = replayReader.GameModeInfo.Players.FirstOrDefault(el => el.PlayersDataInfo.IsCurrentUser).CoreGameCfg.ClientCard.VisualNameRu,
                             IsRecruit = PlayersIsRecruit(replayReader.GameModeInfo.Players),
                             MinLevelOperators = replayReader.GameModeInfo.Players.Min(item => item.Level),
                             Result = formula.Result,

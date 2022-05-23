@@ -49,6 +49,7 @@ namespace CTournament.SaveToExcel
             string value = itemColumns.Name switch
             {
                 "Capitan" => replay.Capitan,
+                "Operator" => replay.Operator,
                 "GameMode" => replay.GameMode,
                 "IsRecruit" => BoolToYesNo(replay.IsRecruit),
                 "MinLevel" => replay.MinLevelOperators.ToString(),

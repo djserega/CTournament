@@ -30,14 +30,16 @@ namespace CTournament.ViewModels
         public Models.CalculationParameters Parameters { get; } = new Models.CalculationParameters();
         public Models.CalculationFormula Formula { get; set; } = new Models.CalculationFormula();
 
-        public int Damage { get; set; }
-        public int Heal { get; set; }
-        public int Time { get; set; }
-        public int Death { get; set; }
-        public int Minutes { get; set; }
-        public int Seconds { get; set; }
-        public int RateMinSec { get; set; }
-        public int CommonRate { get; set; }
+        public double PlayedRoundsCount { get; set; }
+
+        public double Damage { get; set; }
+        public double Heal { get; set; }
+        public double Time { get; set; }
+        public double Death { get; set; }
+        public double Minutes { get; set; }
+        public double Seconds { get; set; }
+        public double RateMinSec { get; set; }
+        public double CommonRate { get; set; }
 
         public double Result { get; private set; }
         public double ResultFull { get; private set; }
@@ -136,17 +138,37 @@ namespace CTournament.ViewModels
         {
             if (savedRateSettings == null)
             {
-                Damage = 1;
-                Heal = 1;
-                Time = 1;
-                Death = 2;
-                Minutes = 100;
-                Seconds = 1;
-                RateMinSec = 100;
-                CommonRate = 100;
+                switch (DefaultValues.RateFormulaVariant)
+                {
+                    case RateFormulaVariants.speedRun:
+                        PlayedRoundsCount = 1;
+                        Damage = 1;
+                        Heal = 1;
+                        Time = 1;
+                        Death = 2;
+                        Minutes = 100;
+                        Seconds = 1;
+                        RateMinSec = 100;
+                        CommonRate = 100;
+                        break;
+                    case RateFormulaVariants.damagePerRound:
+                        PlayedRoundsCount = 1;
+                        Damage = 1;
+                        Heal = 1;
+                        Time = 1;
+                        Death = 2;
+                        Minutes = 100;
+                        Seconds = 1;
+                        RateMinSec = 100;
+                        CommonRate = 1;
+                        break;
+                    default:
+                        break;
+                }
             }
             else
             {
+                PlayedRoundsCount = savedRateSettings.PlayedRoundsCount;
                 Damage = savedRateSettings.Damage;
                 Heal = savedRateSettings.Heal;
                 Time = savedRateSettings.Time;

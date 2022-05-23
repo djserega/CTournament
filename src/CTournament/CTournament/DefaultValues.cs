@@ -12,6 +12,7 @@ namespace CTournament
         public static Brush BrushTie { get; } = Brushes.Black;
 
 
+        public static RateFormulaVariants RateFormulaVariant { get; } = RateFormulaVariants.damagePerRound;
 
         static readonly string[] _hours = { "час", "часа", "часов" };
         static readonly string[] _minutes = { "минута", "минуты", "минут" };

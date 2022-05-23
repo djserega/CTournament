@@ -41,6 +41,7 @@
                   RowDetailsVisibilityMode="{Binding VisibilityDetailedInfoReplay}"
                   Background="{x:Null}">
             <DataGrid.Columns>
+                <DataGridTextColumn     Header="Результат"      Binding="{Binding Result}"/>
                 <DataGridTextColumn     Header="Дата игры"      Binding="{Binding Date, StringFormat=\{0:dd.MM.yyyy HH:mm:ss\}}"/>
                 <DataGridTextColumn     Header="Режим"          Binding="{Binding GameMode}"/>
                 <DataGridTextColumn     Header="Капитан"        Binding="{Binding Capitan}"         />
@@ -54,7 +55,6 @@
                 <DataGridTextColumn     Header="Урон"           Binding="{Binding Data.Damage}"/>
                 <DataGridTextColumn     Header="Лечение"        Binding="{Binding Data.Heal}"/>
                 <DataGridTextColumn     Header="Время боя"      Binding="{Binding MatchTimeAsTime}"/>
-                <DataGridTextColumn     Header="Результат"      Binding="{Binding Result}"/>
             </DataGrid.Columns>
 
             <DataGrid.RowDetailsTemplate>
@@ -112,7 +112,7 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
                     Margin="5 10 5 4"
-                    
+                    Background="{x:Null}"
                     BorderThickness="0"
                     Content="{md:PackIcon Kind=Update}"
                     ToolTip="Обновить текущий каталог"
@@ -121,7 +121,7 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
                     Margin="5"
-                    
+                    Background="{x:Null}"
                     BorderThickness="0"
                     Content="{md:PackIcon Kind=MicrosoftExcel}"
                     ToolTip="Сохранить расчет в каталог"
@@ -130,7 +130,7 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
                     Margin="5"
-                    
+                    Background="{x:Null}"
                     BorderThickness="0"
                     Content="{md:PackIcon Kind=MicrosoftExcel}"
                     ToolTip="Сохранить расчет в каталог (персональный зачет авторов)"

@@ -48,6 +48,7 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
 
                 <Label Grid.Row="0"
@@ -59,12 +60,12 @@
 
                 <Label Grid.Row="1"
                        Grid.Column="0"
-                       Content="Урон:"
+                       Content="Количество раундов:"
                        VerticalAlignment="Center"/>
 
                 <TextBox Grid.Row="1"
                          Grid.Column="1"
-                         Text="{Binding Damage, UpdateSourceTrigger=PropertyChanged}"
+                         Text="{Binding PlayedRoundsCount, UpdateSourceTrigger=PropertyChanged}"
                          VerticalAlignment="Center"
                          HorizontalContentAlignment="Center">
                     <i:Interaction.Triggers>
@@ -76,12 +77,12 @@
 
                 <Label Grid.Row="2"
                        Grid.Column="0"
-                       Content="Лечение:"
+                       Content="Урон:"
                        VerticalAlignment="Center"/>
 
                 <TextBox Grid.Row="2"
                          Grid.Column="1"
-                         Text="{Binding Heal, UpdateSourceTrigger=PropertyChanged}"
+                         Text="{Binding Damage, UpdateSourceTrigger=PropertyChanged}"
                          VerticalAlignment="Center"
                          HorizontalContentAlignment="Center">
                     <i:Interaction.Triggers>
@@ -93,12 +94,12 @@
 
                 <Label Grid.Row="3"
                        Grid.Column="0"
-                       Content="Общее время:"
+                       Content="Лечение:"
                        VerticalAlignment="Center"/>
 
                 <TextBox Grid.Row="3"
                          Grid.Column="1"
-                         Text="{Binding Time, UpdateSourceTrigger=PropertyChanged}"
+                         Text="{Binding Heal, UpdateSourceTrigger=PropertyChanged}"
                          VerticalAlignment="Center"
                          HorizontalContentAlignment="Center">
                     <i:Interaction.Triggers>
@@ -110,12 +111,12 @@
 
                 <Label Grid.Row="4"
                        Grid.Column="0"
-                       Content="Погиб:"
+                       Content="Общее время:"
                        VerticalAlignment="Center"/>
 
                 <TextBox Grid.Row="4"
                          Grid.Column="1"
-                         Text="{Binding Death, UpdateSourceTrigger=PropertyChanged}"
+                         Text="{Binding Time, UpdateSourceTrigger=PropertyChanged}"
                          VerticalAlignment="Center"
                          HorizontalContentAlignment="Center">
                     <i:Interaction.Triggers>
@@ -127,12 +128,12 @@
 
                 <Label Grid.Row="5"
                        Grid.Column="0"
-                       Content="Минуты:"
+                       Content="Погиб:"
                        VerticalAlignment="Center"/>
 
                 <TextBox Grid.Row="5"
                          Grid.Column="1"
-                         Text="{Binding Minutes, UpdateSourceTrigger=PropertyChanged}"
+                         Text="{Binding Death, UpdateSourceTrigger=PropertyChanged}"
                          VerticalAlignment="Center"
                          HorizontalContentAlignment="Center">
                     <i:Interaction.Triggers>
@@ -144,12 +145,12 @@
 
                 <Label Grid.Row="6"
                        Grid.Column="0"
-                       Content="Секунды:"
+                       Content="Минуты:"
                        VerticalAlignment="Center"/>
 
                 <TextBox Grid.Row="6"
                          Grid.Column="1"
-                         Text="{Binding Seconds, UpdateSourceTrigger=PropertyChanged}"
+                         Text="{Binding Minutes, UpdateSourceTrigger=PropertyChanged}"
                          VerticalAlignment="Center"
                          HorizontalContentAlignment="Center">
                     <i:Interaction.Triggers>
@@ -161,12 +162,12 @@
 
                 <Label Grid.Row="7"
                        Grid.Column="0"
-                       Content="Коэфф. минут/секунд:"
+                       Content="Секунды:"
                        VerticalAlignment="Center"/>
 
                 <TextBox Grid.Row="7"
                          Grid.Column="1"
-                         Text="{Binding RateMinSec, UpdateSourceTrigger=PropertyChanged}"
+                         Text="{Binding Seconds, UpdateSourceTrigger=PropertyChanged}"
                          VerticalAlignment="Center"
                          HorizontalContentAlignment="Center">
                     <i:Interaction.Triggers>
@@ -178,10 +179,27 @@
 
                 <Label Grid.Row="8"
                        Grid.Column="0"
-                       Content="Общий коэффицент:"
+                       Content="Коэфф. минут/секунд:"
                        VerticalAlignment="Center"/>
 
                 <TextBox Grid.Row="8"
+                         Grid.Column="1"
+                         Text="{Binding RateMinSec, UpdateSourceTrigger=PropertyChanged}"
+                         VerticalAlignment="Center"
+                         HorizontalContentAlignment="Center">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="TextChanged">
+                            <i:InvokeCommandAction Command="{Binding CommandChangeValueFormula}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TextBox>
+
+                <Label Grid.Row="9"
+                       Grid.Column="0"
+                       Content="Общий коэффицент:"
+                       VerticalAlignment="Center"/>
+
+                <TextBox Grid.Row="9"
                          Grid.Column="1"
                          Text="{Binding CommonRate, UpdateSourceTrigger=PropertyChanged}"
                          VerticalAlignment="Center"
@@ -193,7 +211,7 @@
                     </i:Interaction.Triggers>
                 </TextBox>
 
-                <Grid Grid.Row="9"
+                <Grid Grid.Row="10"
                       Grid.Column="0"
                       Grid.ColumnSpan="2"
                       HorizontalAlignment="Center">
@@ -247,12 +265,12 @@
 
                 <Label Grid.Row="1"
                        Grid.Column="0"
-                       Content="Урон:"
+                       Content="Раундов:"
                        VerticalAlignment="Center"/>
 
                 <TextBox Grid.Row="1"
                          Grid.Column="1"
-                         Text="{Binding Parameters.Damage, UpdateSourceTrigger=PropertyChanged}"
+                         Text="{Binding Parameters.PlayedRoundsCount, UpdateSourceTrigger=PropertyChanged}"
                          VerticalAlignment="Center"
                          HorizontalContentAlignment="Center">
                     <i:Interaction.Triggers>
@@ -264,12 +282,12 @@
 
                 <Label Grid.Row="2"
                        Grid.Column="0"
-                       Content="Лечение:"
+                       Content="Урон:"
                        VerticalAlignment="Center"/>
 
                 <TextBox Grid.Row="2"
                          Grid.Column="1"
-                         Text="{Binding Parameters.Heal, UpdateSourceTrigger=PropertyChanged}"
+                         Text="{Binding Parameters.Damage, UpdateSourceTrigger=PropertyChanged}"
                          VerticalAlignment="Center"
                          HorizontalContentAlignment="Center">
                     <i:Interaction.Triggers>
@@ -281,12 +299,12 @@
 
                 <Label Grid.Row="3"
                        Grid.Column="0"
-                       Content="Общее время:"
+                       Content="Лечение:"
                        VerticalAlignment="Center"/>
 
                 <TextBox Grid.Row="3"
                          Grid.Column="1"
-                         Text="{Binding Parameters.Time, UpdateSourceTrigger=PropertyChanged}"
+                         Text="{Binding Parameters.Heal, UpdateSourceTrigger=PropertyChanged}"
                          VerticalAlignment="Center"
                          HorizontalContentAlignment="Center">
                     <i:Interaction.Triggers>
@@ -298,12 +316,12 @@
 
                 <Label Grid.Row="4"
                        Grid.Column="0"
-                       Content="Погиб:"
+                       Content="Общее время:"
                        VerticalAlignment="Center"/>
 
                 <TextBox Grid.Row="4"
                          Grid.Column="1"
-                         Text="{Binding Parameters.Death, UpdateSourceTrigger=PropertyChanged}"
+                         Text="{Binding Parameters.Time, UpdateSourceTrigger=PropertyChanged}"
                          VerticalAlignment="Center"
                          HorizontalContentAlignment="Center">
                     <i:Interaction.Triggers>
@@ -315,12 +333,12 @@
 
                 <Label Grid.Row="5"
                        Grid.Column="0"
-                       Content="Минуты:"
+                       Content="Погиб:"
                        VerticalAlignment="Center"/>
 
                 <TextBox Grid.Row="5"
                          Grid.Column="1"
-                         Text="{Binding Parameters.Minutes, UpdateSourceTrigger=PropertyChanged}"
+                         Text="{Binding Parameters.Death, UpdateSourceTrigger=PropertyChanged}"
                          VerticalAlignment="Center"
                          HorizontalContentAlignment="Center">
                     <i:Interaction.Triggers>
@@ -332,10 +350,27 @@
 
                 <Label Grid.Row="6"
                        Grid.Column="0"
-                       Content="Секунды:"
+                       Content="Минуты:"
                        VerticalAlignment="Center"/>
 
                 <TextBox Grid.Row="6"
+                         Grid.Column="1"
+                         Text="{Binding Parameters.Minutes, UpdateSourceTrigger=PropertyChanged}"
+                         VerticalAlignment="Center"
+                         HorizontalContentAlignment="Center">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="TextChanged">
+                            <i:InvokeCommandAction Command="{Binding CommandChangeValueFormula}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TextBox>
+
+                <Label Grid.Row="7"
+                       Grid.Column="0"
+                       Content="Секунды:"
+                       VerticalAlignment="Center"/>
+
+                <TextBox Grid.Row="7"
                          Grid.Column="1"
                          Text="{Binding Parameters.Seconds, UpdateSourceTrigger=PropertyChanged}"
                          VerticalAlignment="Center"
@@ -347,7 +382,7 @@
                     </i:Interaction.Triggers>
                 </TextBox>
 
-                <Button Grid.Row="7"
+                <Button Grid.Row="8"
                         Grid.Column="0"
                         Background="{x:Null}"
                         BorderThickness="0"
@@ -355,7 +390,7 @@
                         ToolTip="Восстановить настройки по умолчанию"
                         Command="{Binding CommandSetDefault}"/>
 
-                <Button Grid.Row="7"
+                <Button Grid.Row="8"
                         Grid.Column="1"
                         Background="{x:Null}"
                         BorderThickness="0"
@@ -363,12 +398,13 @@
                         ToolTip="Выполнить расчет"
                         Command="{Binding CommandCalculateDefault}"/>
 
-                <Label Grid.Row="8"
+                <Label Grid.Row="9"
                        Grid.Column="0"
                        Content="Итого:"
                        FontWeight="Bold"
                        VerticalAlignment="Center"/>
-                <TextBlock Grid.Row="8"
+   
+                <TextBlock Grid.Row="9"
                            Grid.Column="1"
                            Text="{Binding Result, Mode=OneWay}"
                            ToolTip="{Binding ResultFull, Mode=OneWay}"

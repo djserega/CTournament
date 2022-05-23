@@ -47,6 +47,7 @@
                 <DataGridCheckBoxColumn Header="Есть рекруты"   Binding="{Binding IsRecruit}"/>
                 <DataGridTextColumn     Header="Мин уровень"    Binding="{Binding MinLevelOperators}" CellStyle="{StaticResource MinLevelOperatorsStyle}"/>
                 <DataGridTextColumn     Header="Миссия"         Binding="{Binding Mission}"/>
+                <DataGridTextColumn     Header="Раундов"        Binding="{Binding PlayedRoundsCount}"/>
                 <DataGridTextColumn     Header="Ликвидировал"   Binding="{Binding Data.AllKills}"/>
                 <DataGridTextColumn     Header="Погиб"          Binding="{Binding Data.Death}"/>
                 <DataGridTextColumn     Header="Содействия"     Binding="{Binding Data.Assists}"/>

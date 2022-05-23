@@ -12,6 +12,10 @@ namespace CTournament.Models.CReplay
 
         public Players.PlayersDataInfo[] PlayersData { get; set; }
         public int WinnerTeamNumber { get => winnerTeamNumber; set { winnerTeamNumber = value; if (value == 1) WinnerTeamNumberView = 5; else WinnerTeamNumberView = value; } }
+        public int[] TeamsRoundsWon { get; set; }
+        public int PlayedRoundsCount { get; set; }
+        public int LowerScoreToWin { get; set; }
+        public int UpperScoreToWin { get; set; }
         public string MatchTime { get; set; }
         public MissionInfo MissionInfo { get; set; }
         public Medals.MedalsInfo MedalsInfo { get; set; }

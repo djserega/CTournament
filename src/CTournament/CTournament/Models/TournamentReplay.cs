@@ -6,6 +6,7 @@ namespace CTournament.Models
 {
     public class TournamentReplay
     {
+        public DateTime Date { get; set; }
         public string Name { get; set; }
         public string FullName { get; set; }
         public CalculationParameters Data { get; set; }
@@ -17,6 +18,7 @@ namespace CTournament.Models
         public bool IsRecruit { get; set; }
         public string Mission { get; set; }
         public string GameMode { get; set; }
+        public int PlayedRoundsCount { get; set; }
 
         public double Result { get; set; }
     }

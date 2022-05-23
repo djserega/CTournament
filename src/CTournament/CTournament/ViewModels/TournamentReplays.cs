@@ -119,7 +119,7 @@ namespace CTournament.ViewModels
         {
             ReplaysUpdating = true;
 
-            List<Models.TournamentReplay> replays = new List<Models.TournamentReplay>();
+            List<Models.TournamentReplay> replays = new();
 
             if (directory != null)
             {
@@ -137,14 +137,14 @@ namespace CTournament.ViewModels
 
         private void ReadDirectoryReplays(Models.TournamentsDirectory directory, List<Models.TournamentReplay> replays)
         {
-            Models.CalculationFormula formula = new Models.CalculationFormula();
+            Models.CalculationFormula formula = new();
 
-            Readers.Replay replayReader = new Readers.Replay();
+            Readers.Replay replayReader = new();
 
             FileInfo[] files = directory.GetFiles();
 
             CountRepays = 0;
-            CountAllReplays = files.Count();
+            CountAllReplays = files.Length;
 
             foreach (FileInfo itemFileReplay in files)
             {
@@ -157,12 +157,13 @@ namespace CTournament.ViewModels
                         List<Models.CReplay.Players.PlayersInfo> playersDatas = replayReader.GameModeInfo.Players.ToList();
                         playersDatas.Sort((a, b) => a.PlayersDataInfo.SortedRole.CompareTo(b.PlayersDataInfo.SortedRole));
 
-                        Models.CalculationParameters parameters = new Models.CalculationParameters(replayReader.ResultInfo);
+                        Models.CalculationParameters parameters = new(replayReader.ResultInfo);
 
                         formula.Calculate(parameters);
 
-                        Models.TournamentReplay tournamentReplay = new Models.TournamentReplay()
+                        Models.TournamentReplay tournamentReplay = new()
                         {
+                            Date = replayReader.GameModeInfo.DateView,
                             Name = itemFileReplay.Name,
                             FullName = itemFileReplay.FullName,
                             Data = parameters,
@@ -174,7 +175,8 @@ namespace CTournament.ViewModels
                             MinLevelOperators = replayReader.GameModeInfo.Players.Min(item => item.Level),
                             Result = formula.Result,
                             Mission = replayReader.GameModeInfo.MissionView,
-                            GameMode = replayReader.GameModeInfo.GameModeView
+                            GameMode = replayReader.GameModeInfo.GameModeView,
+                            PlayedRoundsCount = replayReader.ResultInfo.PlayedRoundsCount
                         };
 
                         replays.Add(tournamentReplay);
